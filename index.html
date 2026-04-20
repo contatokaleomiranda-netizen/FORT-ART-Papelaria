@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>fort.art | papelaria artesanal & personalizada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<site icon link real = "icon" href = "iHdZZ.jpg" type = "image/jpg">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink: #2C1A12;
+  --ink-soft: #4A2E20;
+  --terra: #C4724A;
+  --terra-light: #D9956E;
+  --terra-glow: #E8B99A;
+  --petal: #F2E4DA;
+  --cream: #FBF6EF;
+  --warm-white: #FEFCF8;
+  --linen: #F5EDE3;
+  --sage-hint: #EBE8E0;
+  --gold: #C9A96E;
+  --gold-light: #E8D5A8;
+  --shadow-xs: 0 2px 8px rgba(44,26,18,0.06);
+  --shadow-sm: 0 6px 20px rgba(44,26,18,0.08);
+  --shadow-md: 0 16px 40px rgba(44,26,18,0.10);
+  --shadow-lg: 0 32px 64px rgba(44,26,18,0.13);
+  --shadow-float: 0 40px 80px rgba(44,26,18,0.16);
+  --radius-sm: 16px;
+  --radius-md: 28px;
+  --radius-lg: 44px;
+  --radius-xl: 64px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--warm-white);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--linen); }
+::-webkit-scrollbar-thumb { background: var(--terra-glow); border-radius: 99px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes float {
+  0%,100% { transform: translateY(0) rotate(-1deg); }
+  50%      { transform: translateY(-10px) rotate(1deg); }
+}
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+@keyframes cartPop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.18); }
+  70%  { transform: scale(0.94); }
+  100% { transform: scale(1); }
+}
+@keyframes slideInRight {
+  from { transform: translateX(40px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes toastIn {
+  from { transform: translateX(-40px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(196,114,74,0.3); }
+  70%  { box-shadow: 0 0 0 10px rgba(196,114,74,0); }
+  100% { box-shadow: 0 0 0 0 rgba(196,114,74,0); }
+}
+@keyframes marqueeAnim {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── ANNOUNCE BAR ── */
+.announce-bar {
+  background: var(--ink);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 10px 24px;
+  font-size: 0.78rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.announce-bar span { color: var(--terra-glow); margin: 0 6px; }
+
+/* ── NAVBAR ── */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  position: sticky;
+  top: 0;
+  background: rgba(254,252,248,0.92);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  z-index: 200;
+  border-bottom: 1px solid rgba(196,114,74,0.12);
+  transition: padding 0.3s ease;
+}
+.navbar.scrolled { padding: 14px 0; }
+
+.logo-area { display: flex; align-items: center; gap: 18px; }
+.logo-img {
+  height: 58px;
+  width: auto;
+  border-radius: 18px;
+  padding: 5px;
+  background: white;
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+.logo-img:hover { transform: scale(1.05) rotate(2deg); }
+
+.brand-text h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  background: linear-gradient(130deg, var(--ink) 30%, var(--terra));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.brand-text span {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--terra-light);
+  font-weight: 400;
+  margin-top: 2px;
+  -webkit-text-fill-color: var(--terra-light);
+}
+
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-link {
+  font-size: 0.82rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 2px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: var(--terra);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: var(--linen);
+  border: 1px solid rgba(196,114,74,0.2);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s ease;
+}
+.cart-btn:hover { background: var(--terra); border-color: var(--terra); transform: scale(1.05); }
+.cart-btn:hover .cart-btn-icon { color: white; }
+.cart-btn-icon { color: var(--terra); font-size: 1.1rem; transition: color 0.3s; }
+.cart-count {
+  position: absolute;
+  top: -5px; right: -5px;
+  background: var(--terra);
+  color: white;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  font-size: 0.65rem; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--warm-white);
+  animation: pulseRing 2s infinite;
+}
+
+/* ── HERO ── */
+.hero {
+  margin: 64px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  min-height: 520px;
+}
+
+.hero-left { animation: fadeUp 0.9s ease both; }
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--terra);
+  font-weight: 500;
+  margin-bottom: 24px;
+  padding: 8px 18px;
+  background: rgba(196,114,74,0.08);
+  border-radius: 99px;
+  border: 1px solid rgba(196,114,74,0.18);
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--terra);
+  border-radius: 50%;
+  animation: pulseRing 2s infinite;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  color: var(--ink);
+  margin-bottom: 28px;
+}
+.hero-title em { font-style: italic; color: var(--terra); }
+
+.hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #6B4F3E;
+  max-width: 480px;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.hero-cta-group { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 16px 32px;
+  border-radius: 99px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  display: inline-flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.btn-primary:hover { background: var(--terra); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(196,114,74,0.3); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 16px 24px;
+  border-radius: 99px;
+  font-size: 0.88rem;
+  font-weight: 400;
+  border: 1px solid rgba(44,26,18,0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex; align-items: center; gap: 8px;
+  text-decoration: none;
+}
+.btn-ghost:hover { border-color: var(--terra); color: var(--terra); transform: translateY(-2px); }
+
+.hero-trust { margin-top: 48px; display: flex; gap: 32px; flex-wrap: wrap; }
+.trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; color: #7A5A46; }
+.trust-icon {
+  width: 36px; height: 36px;
+  background: var(--linen);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; color: var(--terra); flex-shrink: 0;
+}
+
+.hero-right {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeUp 0.9s 0.15s ease both;
+}
+.hero-visual-wrap { position: relative; width: 100%; max-width: 460px; }
+.hero-blob {
+  position: absolute;
+  width: 90%; height: 90%;
+  top: 5%; left: 5%;
+  background: radial-gradient(ellipse at 40% 60%, rgba(196,114,74,0.12), transparent 70%),
+              radial-gradient(ellipse at 70% 30%, rgba(201,169,110,0.1), transparent 60%);
+  border-radius: 60% 40% 50% 70% / 50% 60% 40% 55%;
+  filter: blur(30px);
+}
+.hero-img-main {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  position: relative; z-index: 2;
+  aspect-ratio: 4/3;
+  background: var(--linen);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hero-img-main img {
+  width: 100%; height: 100%; object-fit: cover;
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: -24px; left: -24px;
+  z-index: 3;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  box-shadow: var(--shadow-md);
+  display: flex; align-items: center; gap: 12px;
+  border: 1px solid rgba(196,114,74,0.15);
+  animation: fadeUp 0.9s 0.3s ease both;
+}
+.hero-badge-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--terra), var(--gold));
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 1.1rem; flex-shrink: 0;
+}
+.hero-badge-text strong { display: block; font-size: 0.92rem; color: var(--ink); font-weight: 600; }
+.hero-badge-text span { font-size: 0.72rem; color: #9B7B66; }
+
+.hero-badge-2 {
+  position: absolute;
+  top: -20px; right: -20px;
+  z-index: 3;
+  width: 90px; height: 90px;
+  background: var(--ink);
+  border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-md);
+  animation: spinSlow 20s linear infinite;
+}
+.hero-badge-2 span {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold-light);
+  font-size: 0.62rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.4;
+  padding: 0 8px;
+}
+.hero-badge-2 em { font-size: 1.2rem; font-style: normal; display: block; }
+
+/* ── MARQUEE ── */
+.marquee-section {
+  background: var(--ink);
+  padding: 20px 0;
+  overflow: hidden;
+  margin: 16px 0 80px;
+  border-radius: var(--radius-lg);
+}
+.marquee-track {
+  display: flex;
+  animation: marqueeAnim 22s linear infinite;
+  white-space: nowrap;
+}
+.marquee-item {
+  display: inline-flex; align-items: center; gap: 16px;
+  padding: 0 40px;
+  color: var(--gold-light);
+  font-size: 0.78rem; letter-spacing: 2px;
+  text-transform: uppercase; font-weight: 400; flex-shrink: 0;
+}
+.marquee-dot { color: var(--terra); font-size: 0.5rem; }
+
+/* ── SECTION HEADER ── */
+.section-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin: 0 0 48px; flex-wrap: wrap; gap: 20px;
+}
+.section-label {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.68rem; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--terra);
+  font-weight: 500; margin-bottom: 12px;
+}
+.section-label::before { content: ''; width: 20px; height: 1px; background: var(--terra); }
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400; color: var(--ink);
+  letter-spacing: -0.5px; line-height: 1.1;
+}
+.section-title em { font-style: italic; color: var(--terra); }
+
+/* ── SEARCH & FILTERS ── */
+.search-filter-bar {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  margin-bottom: 48px; padding: 20px 24px;
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(196,114,74,0.12);
+  box-shadow: var(--shadow-xs);
+}
+.search-wrap { position: relative; flex: 1; min-width: 200px; }
+.search-wrap i {
+  position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+  color: var(--terra-glow); font-size: 0.9rem;
+}
+.search-wrap input {
+  width: 100%;
+  padding: 12px 18px 12px 44px;
+  border-radius: 99px;
+  border: 1px solid rgba(196,114,74,0.18);
+  background: var(--warm-white);
+  font-size: 0.9rem; color: var(--ink);
+  font-family: 'DM Sans', sans-serif; font-weight: 300;
+  transition: all 0.3s;
+}
+.search-wrap input:focus {
+  outline: none; border-color: var(--terra);
+  box-shadow: 0 0 0 4px rgba(196,114,74,0.08); background: white;
+}
+.search-wrap input::placeholder { color: #C4A89A; }
+.filter-divider { width: 1px; height: 32px; background: rgba(196,114,74,0.15); flex-shrink: 0; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.filter-btn {
+  padding: 9px 20px; border-radius: 99px;
+  background: transparent;
+  border: 1px solid rgba(196,114,74,0.22);
+  cursor: pointer; font-size: 0.82rem; font-weight: 500;
+  color: var(--ink-soft);
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  font-family: 'DM Sans', sans-serif; letter-spacing: 0.2px;
+}
+.filter-btn:hover { border-color: var(--terra); color: var(--terra); transform: translateY(-2px); }
+.filter-btn.active {
+  background: var(--ink); border-color: var(--ink); color: white;
+  transform: translateY(-2px); box-shadow: var(--shadow-sm);
+}
+
+/* ── PRODUCTS GRID ── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 36px; margin-bottom: 80px;
+}
+
+/* ── SKELETON ── */
+.skeleton-card {
+  background: white; border-radius: var(--radius-lg);
+  padding: 28px; border: 1px solid rgba(196,114,74,0.08); overflow: hidden;
+}
+.skeleton-block {
+  background: linear-gradient(90deg, var(--linen) 25%, var(--petal) 50%, var(--linen) 75%);
+  background-size: 600px 100%;
+  animation: shimmer 1.5s infinite linear; border-radius: 12px;
+}
+.skeleton-img { height: 200px; border-radius: var(--radius-md); margin-bottom: 20px; }
+.skeleton-title { height: 22px; width: 70%; margin-bottom: 12px; }
+.skeleton-price { height: 28px; width: 40%; margin-bottom: 20px; }
+.skeleton-btn { height: 44px; border-radius: 99px; }
+
+/* ── PRODUCT CARD ── */
+.product-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(196,114,74,0.1);
+  overflow: hidden;
+  transition: all 0.45s cubic-bezier(0.2,0,0,1);
+  animation: fadeUp 0.6s ease both;
+  display: flex; flex-direction: column; position: relative;
+}
+.product-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-float); border-color: rgba(196,114,74,0.2); }
+
+.product-card-top {
+  background: var(--linen); padding: 28px;
+  position: relative; overflow: hidden;
+}
+.product-card-top::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(201,169,110,0.15), transparent 60%);
+  pointer-events: none;
+}
+
+.card-tag {
+  position: absolute; top: 18px; left: 18px; z-index: 2;
+  background: var(--ink); color: var(--gold-light);
+  font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 99px; font-weight: 500;
+}
+.card-tag.handmade { background: var(--terra); color: white; }
+
+.card-wish {
+  position: absolute; top: 14px; right: 14px; z-index: 2;
+  width: 36px; height: 36px; background: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border: none; color: #C4A89A; font-size: 0.9rem;
+  transition: all 0.3s; box-shadow: var(--shadow-xs);
+}
+.card-wish:hover { color: #e0776e; transform: scale(1.1); background: #fff5f5; }
+.card-wish.active { color: #e0776e; }
+
+/* ── GALLERY ── */
+.gallery-main {
+  display: flex; justify-content: center; align-items: center;
+  height: 220px; overflow: hidden; border-radius: var(--radius-md);
+  cursor: zoom-in; position: relative;
+}
+.gallery-main::after {
+  content: '\f00e'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: white;
+  background: rgba(44,26,18,0.5);
+  opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(4px);
+}
+.gallery-main:hover::after { opacity: 1; }
+.gallery-main img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2,0,0,1);
+}
+.gallery-main:hover img { transform: scale(1.06); }
+
+.gallery-nav {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; margin-top: 14px;
+}
+.nav-arrow {
+  background: white; color: var(--terra);
+  border: 1px solid rgba(196,114,74,0.2);
+  width: 32px; height: 32px; border-radius: 50%;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; transition: all 0.3s;
+}
+.nav-arrow:hover { background: var(--terra); color: white; transform: scale(1.1); }
+.thumbnails {
+  display: flex; gap: 8px; justify-content: center; flex: 1; overflow-x: auto;
+}
+.thumb {
+  width: 44px; height: 44px; object-fit: cover; border-radius: 10px;
+  cursor: pointer; border: 2px solid transparent;
+  opacity: 0.6; transition: all 0.25s; flex-shrink: 0;
+}
+.thumb.active { border-color: var(--terra); opacity: 1; transform: scale(1.08); }
+.thumb:hover:not(.active) { opacity: 0.85; }
+
+/* ── PRODUCT INFO ── */
+.product-card-bottom { padding: 24px 28px 28px; flex: 1; display: flex; flex-direction: column; }
+.product-meta {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 12px; margin-bottom: 8px;
+}
+.product-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 500; color: var(--ink);
+  line-height: 1.25; letter-spacing: -0.2px; flex: 1;
+}
+.product-price {
+  font-size: 1.5rem; font-weight: 600; color: var(--terra);
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: -0.5px; flex-shrink: 0;
+}
+.product-price small {
+  font-size: 0.75rem; font-family: 'DM Sans', sans-serif;
+  color: #9B7B66; font-weight: 300; display: block; text-align: right; margin-top: -2px;
+}
+.product-divider { width: 100%; height: 1px; background: rgba(196,114,74,0.1); margin: 16px 0; }
+
+/* ── CUSTOMIZATION ── */
+.custom-options {
+  background: linear-gradient(135deg, var(--cream), var(--linen));
+  border: 1px solid rgba(196,114,74,0.12);
+  padding: 20px; border-radius: var(--radius-md); margin-bottom: 20px; flex: 1;
+}
+.custom-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+.custom-header-icon {
+  width: 28px; height: 28px; background: var(--terra); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: white;
+}
+.custom-header span {
+  font-size: 0.78rem; font-weight: 600; color: var(--ink-soft);
+  letter-spacing: 0.8px; text-transform: uppercase;
+}
+.custom-group { margin-bottom: 14px; }
+.custom-group:last-child { margin-bottom: 0; }
+.custom-label {
+  font-size: 0.7rem; font-weight: 600; color: #9B7B66;
+  letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 8px;
+}
+.custom-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.custom-pill {
+  padding: 6px 14px; border-radius: 99px;
+  border: 1px solid rgba(196,114,74,0.25); background: white;
+  font-size: 0.78rem; cursor: pointer; transition: all 0.25s;
+  color: var(--ink-soft); font-family: 'DM Sans', sans-serif; font-weight: 400;
+}
+.custom-pill:hover { border-color: var(--terra); color: var(--terra); }
+.custom-pill.selected { background: var(--terra); border-color: var(--terra); color: white; transform: scale(1.03); }
+
+/* ── CARD ACTIONS ── */
+.card-actions { display: flex; gap: 10px; align-items: center; margin-top: auto; }
+.qty-wrap {
+  display: flex; align-items: center;
+  background: var(--linen); border-radius: 99px;
+  border: 1px solid rgba(196,114,74,0.18); overflow: hidden; flex-shrink: 0;
+}
+.qty-btn {
+  width: 36px; height: 40px; border: none; background: transparent;
+  cursor: pointer; color: var(--terra); font-size: 1rem; font-weight: 500;
+  transition: all 0.2s; display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+}
+.qty-btn:hover { background: var(--terra); color: white; }
+.qty-input {
+  width: 44px; border: none; background: transparent;
+  text-align: center; font-size: 0.9rem; font-weight: 600;
+  color: var(--ink); font-family: 'DM Sans', sans-serif;
+}
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+.btn-add {
+  flex: 1; background: var(--ink); color: white; border: none;
+  padding: 0 20px; height: 42px; border-radius: 99px;
+  font-size: 0.85rem; font-weight: 500; cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  font-family: 'DM Sans', sans-serif;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-add:hover { background: var(--terra); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(196,114,74,0.3); }
+.btn-add:active { transform: scale(0.97); }
+.btn-add i { font-size: 0.8rem; }
+
+/* ── IMAGE MODAL ── */
+.image-modal {
+  display: none; position: fixed; inset: 0;
+  background: rgba(20,10,6,0.95); z-index: 2000;
+  justify-content: center; align-items: center;
+  backdrop-filter: blur(8px);
+}
+.image-modal.active { display: flex; animation: fadeIn 0.3s ease; }
+.modal-content img {
+  max-width: 88vw; max-height: 82vh;
+  border-radius: var(--radius-lg); object-fit: contain;
+}
+.modal-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
+  color: white; border: 1px solid rgba(255,255,255,0.15);
+  width: 52px; height: 52px; border-radius: 50%; font-size: 1rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s;
+}
+.modal-arrow:hover { background: var(--terra); border-color: var(--terra); transform: translateY(-50%) scale(1.08); }
+.modal-arrow.prev { left: 28px; }
+.modal-arrow.next { right: 28px; }
+.close-modal {
+  position: absolute; top: 24px; right: 32px;
+  color: rgba(255,255,255,0.7); font-size: 2rem; cursor: pointer;
+  width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: all 0.3s; background: rgba(255,255,255,0.08);
+}
+.close-modal:hover { color: white; background: var(--terra); transform: rotate(90deg); }
+.modal-counter {
+  position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+  background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
+  color: rgba(255,255,255,0.8); padding: 6px 18px; border-radius: 99px; font-size: 0.8rem;
+}
+
+/* ── REVIEWS ── */
+.reviews-section {
+  margin: 80px 0;
+  background: linear-gradient(135deg, var(--linen), var(--petal));
+  border-radius: var(--radius-xl); padding: 72px 64px;
+  position: relative; overflow: hidden;
+}
+.reviews-section::before {
+  content: '"';
+  font-family: 'Cormorant Garamond', serif; font-size: 24rem;
+  color: rgba(196,114,74,0.06); position: absolute;
+  top: -40px; left: 20px; line-height: 1; pointer-events: none; font-style: italic;
+}
+.review-cards {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px; margin-top: 48px;
+}
+.review-card {
+  background: white; border-radius: var(--radius-lg); padding: 32px;
+  box-shadow: var(--shadow-xs); transition: all 0.35s ease;
+  border: 1px solid rgba(196,114,74,0.08);
+}
+.review-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 3px; margin-bottom: 16px; }
+.review-text {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
+  font-style: italic; line-height: 1.65; color: var(--ink-soft); margin-bottom: 20px;
+}
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--terra), var(--gold));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 0.85rem; font-weight: 600; flex-shrink: 0;
+}
+.review-author strong { display: block; font-size: 0.88rem; color: var(--ink); font-weight: 600; }
+.review-author span { font-size: 0.72rem; color: #9B7B66; }
+
+/* ── CART ── */
+.cart-overlay {
+  position: fixed; inset: 0;
+  background: rgba(20,10,6,0.5); z-index: 500;
+  opacity: 0; visibility: hidden;
+  transition: all 0.4s ease; backdrop-filter: blur(4px);
+}
+body.cart-open .cart-overlay { opacity: 1; visibility: visible; }
+
+.cart-sidebar {
+  position: fixed; top: 0; right: 0;
+  width: 480px; max-width: 95vw; height: 100%;
+  background: var(--warm-white); z-index: 600;
+  display: flex; flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.2,0.9,0.4,1);
+  border-left: 1px solid rgba(196,114,74,0.15);
+  box-shadow: -20px 0 60px rgba(44,26,18,0.15);
+}
+body.cart-open .cart-sidebar { transform: translateX(0); }
+
+.cart-header { padding: 28px 28px 20px; border-bottom: 1px solid rgba(196,114,74,0.1); background: white; }
+.cart-header-top { display: flex; justify-content: space-between; align-items: center; }
+.cart-header h2 {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;
+  font-weight: 500; color: var(--ink); display: flex; align-items: center; gap: 10px;
+}
+.cart-header h2 i { color: var(--terra); font-size: 1.4rem; }
+.cart-actions { display: flex; gap: 10px; }
+.clear-cart, .close-cart {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--linen); border: none; cursor: pointer;
+  color: #9B7B66; font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center; transition: all 0.3s;
+}
+.clear-cart:hover { background: #ffe8e8; color: #d96b6b; }
+.close-cart:hover { background: var(--terra); color: white; transform: rotate(90deg); }
+
+.cart-items {
+  flex: 1; overflow-y: auto; padding: 20px 24px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.empty-cart {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 16px; padding: 60px 20px; text-align: center;
+}
+.empty-cart i { font-size: 3rem; color: var(--terra-glow); opacity: 0.5; }
+.empty-cart p { color: #9B7B66; font-size: 0.95rem; }
+.empty-cart small { font-size: 0.8rem; color: #C4A89A; }
+
+.cart-item {
+  background: white; border-radius: var(--radius-md); padding: 16px;
+  display: flex; gap: 14px; border: 1px solid rgba(196,114,74,0.1);
+  transition: all 0.3s; animation: slideInRight 0.35s ease;
+}
+.cart-item:hover { box-shadow: var(--shadow-sm); transform: translateX(-4px); }
+.cart-item-image {
+  width: 76px; height: 76px; background: var(--linen);
+  border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.cart-item-image img { width: 100%; height: 100%; object-fit: cover; }
+.cart-item-details { flex: 1; min-width: 0; }
+.cart-item-name {
+  font-weight: 600; font-size: 0.92rem; color: var(--ink); margin-bottom: 6px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.cart-item-custom {
+  font-size: 0.68rem; color: var(--terra);
+  background: rgba(196,114,74,0.08); display: inline-block;
+  padding: 3px 10px; border-radius: 99px; margin-bottom: 10px;
+}
+.cart-item-controls { display: flex; align-items: center; gap: 10px; }
+.cart-item-qty {
+  display: flex; align-items: center; background: var(--linen);
+  border-radius: 99px; border: 1px solid rgba(196,114,74,0.15); overflow: hidden;
+}
+.cart-item-qty button {
+  width: 28px; height: 28px; border: none; background: transparent;
+  cursor: pointer; color: var(--terra); font-size: 1rem; font-weight: 500;
+  transition: all 0.2s; display: flex; align-items: center; justify-content: center;
+}
+.cart-item-qty button:hover { background: var(--terra); color: white; }
+.cart-item-qty span {
+  font-size: 0.82rem; font-weight: 600; padding: 0 4px;
+  color: var(--ink); min-width: 20px; text-align: center;
+}
+.cart-item-remove {
+  background: none; border: none; color: #C4A89A;
+  cursor: pointer; transition: all 0.2s; font-size: 0.85rem; padding: 4px;
+}
+.cart-item-remove:hover { color: #e0776e; transform: scale(1.15); }
+.cart-item-subtotal {
+  font-weight: 700; color: var(--terra); align-self: flex-start;
+  flex-shrink: 0; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;
+}
+
+.cart-footer { padding: 24px 28px 32px; border-top: 1px solid rgba(196,114,74,0.1); background: white; }
+.cart-subtotals { margin-bottom: 20px; }
+.cart-row { display: flex; justify-content: space-between; font-size: 0.88rem; color: #7A5A46; margin-bottom: 8px; }
+.cart-total-row {
+  display: flex; justify-content: space-between;
+  font-family: 'Cormorant Garamond', serif; font-weight: 600;
+  font-size: 1.3rem; color: var(--ink);
+  padding-top: 12px; border-top: 1px solid rgba(196,114,74,0.12);
+}
+.cart-total { font-weight: 700; color: var(--terra); }
+
+.btn-whats {
+  width: 100%; background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white; border: none; padding: 16px 24px; border-radius: 99px;
+  font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.35s;
+  font-family: 'DM Sans', sans-serif;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin-top: 16px; box-shadow: 0 8px 24px rgba(37,211,102,0.25);
+}
+.btn-whats:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(37,211,102,0.35); }
+.btn-whats i { font-size: 1.1rem; }
+
+/* ── TOAST ── */
+.toast-msg {
+  position: fixed; bottom: 32px; left: 32px;
+  background: var(--ink); color: var(--cream);
+  padding: 14px 24px; border-radius: 99px; z-index: 1100;
+  font-size: 0.88rem; font-weight: 400;
+  display: flex; align-items: center; gap: 10px;
+  animation: toastIn 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  box-shadow: var(--shadow-lg); max-width: 320px;
+}
+.toast-msg i { color: var(--terra-glow); }
+
+/* ── BACK TO TOP ── */
+.back-to-top {
+  position: fixed; bottom: 32px; right: 32px;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: white; color: var(--terra);
+  border: 1px solid rgba(196,114,74,0.2);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s;
+  box-shadow: var(--shadow-md); font-size: 0.85rem;
+}
+.back-to-top.show { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--terra); color: white; transform: translateY(-4px); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink); color: rgba(255,255,255,0.6);
+  padding: 72px 0 40px; margin-top: 80px;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+.footer-inner {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 56px; padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand h3 {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;
+  font-weight: 400; color: white; margin-bottom: 12px;
+}
+.footer-brand p { font-size: 0.88rem; line-height: 1.7; margin-bottom: 24px; }
+.social-links { display: flex; gap: 12px; }
+.social-links a {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.6); font-size: 0.95rem;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; transition: all 0.3s;
+}
+.social-links a:hover { background: var(--terra); border-color: var(--terra); color: white; transform: translateY(-3px); }
+.footer-col h4 {
+  color: white; font-size: 0.75rem; letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 20px; font-weight: 500;
+}
+.footer-col p, .footer-col a {
+  display: block; font-size: 0.88rem; line-height: 2;
+  color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--terra-glow); }
+.footer-bottom {
+  padding-top: 32px; display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 16px;
+}
+.footer-bottom p { font-size: 0.8rem; }
+.footer-bottom span { color: var(--terra-glow); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .container { padding: 0 28px; }
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  .hero { grid-template-columns: 1fr; gap: 40px; }
+  .hero-right { display: none; }
+  .hero-title { font-size: 2.8rem; }
+  .products-grid { grid-template-columns: 1fr; gap: 24px; }
+  .search-filter-bar { flex-direction: column; align-items: stretch; }
+  .filter-divider { display: none; }
+  .reviews-section { padding: 48px 28px; }
+  .review-cards { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .marquee-section { border-radius: var(--radius-md); }
+  .section-header { flex-direction: column; align-items: flex-start; }
+  .nav-link { display: none; }
+  .cart-sidebar { width: 100%; max-width: 100%; }
+  .modal-arrow.prev { left: 12px; }
+  .modal-arrow.next { right: 12px; }
+}
+
+.product-card:nth-child(1) { animation-delay: 0.05s; }
+.product-card:nth-child(2) { animation-delay: 0.1s; }
+.product-card:nth-child(3) { animation-delay: 0.15s; }
+.product-card:nth-child(4) { animation-delay: 0.2s; }
+.product-card:nth-child(5) { animation-delay: 0.25s; }
+.product-card:nth-child(6) { animation-delay: 0.3s; }
+.product-card:nth-child(7) { animation-delay: 0.35s; }
+.product-card:nth-child(8) { animation-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<div class="announce-bar">
+  ✦ Frete grátis para SJRP <span>·</span> Personalização em até 3 dias úteis <span>·</span> Feito à mão com amor ✦
+</div>
+
+<div class="container">
+  <nav class="navbar" id="navbar">
+    <div class="logo-area">
+      <img class="logo-img" src="https://i.ibb.co/MkvBxbqN/fortart-logo.png" alt="fort.art logo" onerror="this.src='https://placehold.co/200x80?text=fort.art'">
+      <div class="brand-text">
+        <h1>fort.art papelaria</h1>
+        <span>cadernos com alma & personalidade</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="#products" class="nav-link">Produtos</a>
+      <a href="#sobre" class="nav-link">Nossa história</a>
+      <div class="cart-btn" id="cartIconBtn">
+        <i class="fas fa-shopping-bag cart-btn-icon"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="sobre">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Papelaria artesanal · São José do Rio Preto</div>
+      <h2 class="hero-title">
+        Objetos que<br>
+        <em>carregam</em><br>
+        memórias
+      </h2>
+      <p class="hero-desc">
+        Desde 2019, criamos cadernos e presentes que vão além do papel — são extensões da sua história. Cada peça é feita à mão com carinho, design autoral e muita alma.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#products" class="btn-primary">
+          <i class="fas fa-star" style="font-size:0.9rem;"></i>
+          Ver coleção
+        </a>
+        <a href="https://wa.me/5511987524960" target="_blank" class="btn-ghost">
+          <i class="fab fa-whatsapp"></i>
+          Falar conosco
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fas fa-hand-sparkles"></i></div>
+          <span>Feito à mão</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fas fa-palette"></i></div>
+          <span>100% personalizado</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><i class="fas fa-leaf"></i></div>
+          <span>Sustentável</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-visual-wrap">
+        <div class="hero-blob"></div>
+        <div class="hero-img-main">
+          <img src="https://i.ibb.co/MkvBxbqN/fortart-logo.png" alt="fort.art" onerror="this.src='https://placehold.co/460x360/F5EDE3/C4724A?text=fort.art'">
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-icon"><i class="fas fa-star"></i></div>
+          <div class="hero-badge-text">
+            <strong>+500 clientes felizes</strong>
+            <span>avaliação 5 ★ no Instagram</span>
+          </div>
+        </div>
+        <div class="hero-badge-2">
+          <span><em>✦</em>Desde<br>2019</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">Cadernos artesanais <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Presentes únicos <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Design autoral <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Personalização total <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Feito à mão <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Alma no papel <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">São José do Rio Preto <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">fort.art papelaria <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Cadernos artesanais <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Presentes únicos <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Design autoral <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Personalização total <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Feito à mão <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">Alma no papel <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">São José do Rio Preto <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">fort.art papelaria <span class="marquee-dot">◆</span></span>
+  </div>
+</div>
+
+<div class="container">
+  <section id="products">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Coleção exclusiva</div>
+        <h2 class="section-title">Produtos que <em>inspiram</em></h2>
+      </div>
+    </div>
+
+    <div class="search-filter-bar">
+      <div class="search-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Buscar por nome ou categoria…">
+      </div>
+      <div class="filter-divider"></div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="notebook">Cadernos & Agendas</button>
+        <button class="filter-btn" data-filter="presente">Presentes & Kits</button>
+      </div>
+    </div>
+
+    <div id="productsContainer" class="products-grid">
+      <div class="skeleton-card"><div class="skeleton-block skeleton-img"></div><div class="skeleton-block skeleton-title"></div><div class="skeleton-block skeleton-price"></div><div class="skeleton-block skeleton-btn"></div></div>
+      <div class="skeleton-card"><div class="skeleton-block skeleton-img"></div><div class="skeleton-block skeleton-title"></div><div class="skeleton-block skeleton-price"></div><div class="skeleton-block skeleton-btn"></div></div>
+      <div class="skeleton-card"><div class="skeleton-block skeleton-img"></div><div class="skeleton-block skeleton-title"></div><div class="skeleton-block skeleton-price"></div><div class="skeleton-block skeleton-btn"></div></div>
+    </div>
+  </section>
+
+  <section class="reviews-section">
+    <div>
+      <div class="section-label">Depoimentos</div>
+      <h2 class="section-title">O que dizem <em>nossos clientes</em></h2>
+    </div>
+    <div class="review-cards">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"A agenda personalizada é simplesmente linda! Chegou embalada com tanto carinho que já foi um presente antes de abrir."</p>
+        <div class="review-author">
+          <div class="review-avatar">C</div>
+          <div><strong>Camila S.</strong><span>São José do Rio Preto · Cliente fiel</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Pedido pelo WhatsApp foi super rápido e fácil. O caderno ficou exatamente como eu imaginei — qualidade incrível!"</p>
+        <div class="review-author">
+          <div class="review-avatar">R</div>
+          <div><strong>Rafael C.</strong><span>Instagram · @rc.design</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Design impecável, entrega rápida e o material tem uma qualidade que você percebe ao toque. Vale muito o investimento."</p>
+        <div class="review-author">
+          <div class="review-avatar">J</div>
+          <div><strong>Júlia M.</strong><span>São Paulo · Professora</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>fort.art papelaria</h3>
+        <p>Criando objetos que carregam memórias desde 2019. Cada peça é feita à mão com carinho, design autoral e muita alma.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/fort_art_papelaria?igsh=MWQ3ZHR1YWJzdG40dQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="https://wa.me/5511987524960" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <p>📍 Rua Expedito Ferreira de Lima</p>
+        <p>Bairro Cambuí · SJRP, SP</p>
+        <a href="mailto:contato@fortart.com">contato@fortart.com</a>
+        <a href="https://wa.me/5511987524960" target="_blank">(11) 98752-4960</a>
+      </div>
+      <div class="footer-col">
+        <h4>Informações</h4>
+        <a href="#">Como personalizar</a>
+        <a href="#">Prazo de entrega</a>
+        <a href="#">Trocas e devoluções</a>
+        <a href="#">Perguntas frequentes</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 fort.art papelaria · Feito com <span>♥</span> em São José do Rio Preto</p>
+      <p>✨ Cada caderno conta uma história</p>
+    </div>
+  </footer>
+</div>
+
+<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+<div id="imageModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <button class="modal-arrow prev" id="modalPrev"><i class="fas fa-chevron-left"></i></button>
+  <button class="modal-arrow next" id="modalNext"><i class="fas fa-chevron-right"></i></button>
+  <div class="modal-content"><img id="modalImage" src="" alt="ampliada"></div>
+  <div class="modal-counter" id="modalCounter"></div>
+</div>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <div class="cart-header-top">
+      <h2><i class="fas fa-shopping-bag"></i> Seu carrinho</h2>
+      <div class="cart-actions">
+        <button class="clear-cart" id="clearCartBtn" title="Limpar carrinho"><i class="fas fa-trash-alt"></i></button>
+        <button class="close-cart" id="closeCartBtn" title="Fechar"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+  <div id="cartItemsList" class="cart-items">
+    <div class="empty-cart">
+      <i class="fas fa-shopping-bag"></i>
+      <p>Seu carrinho está vazio</p>
+      <small>Adicione produtos para começar seu pedido</small>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-subtotals">
+      <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span></div>
+      <div class="cart-row"><span>Personalização</span><span style="color:#25a085;">Inclusa ✓</span></div>
+      <div class="cart-total-row"><span>Total</span><span class="cart-total" id="cartTotal">R$ 0,00</span></div>
+    </div>
+    <button class="btn-whats" id="sendWhatsBtn">
+      <i class="fab fa-whatsapp"></i>
+      Finalizar pedido pelo WhatsApp
+    </button>
+  </div>
+</div>
+
+<script>
+const productsData = [
+  { id:1, name:"Quadro Personalizado com Fotos",                       price:89.90, isNotebook:false, category:"presente", images:["SWN61.jpg"],           tag:"Presente"    },
+  { id:2, name:"Caneta personalizada com clips",                        price:34.90, isNotebook:false, category:"presente", images:["SdogB.jpg"],           tag:"Novidade"    },
+  { id:3, name:"Kit Presente \u201cPara Algu\u00e9m Especial\u201d",   price:59.90, isNotebook:false, category:"presente", images:["bPzkl.jpg"],           tag:"Presente"    },
+  { id:4, name:"Cesta especial para algu\u00e9m que voc\u00ea ama",    price:79.90, isNotebook:false, category:"presente", images:["PbHBf.jpg"],           tag:"Exclusivo"   },
+  { id:5, name:"Agenda personalizada",                                  price:49.90, isNotebook:true,  category:"notebook", images:["xnvak.jpg","lyTQp.jpg"],tag:"Personalizado"},
+  { id:6, name:"Caderno personalizado",                                 price:45.90, isNotebook:true,  category:"notebook", images:["5Y5uL.jpg"],           tag:"Personalizado"},
+  { id:7, name:"Kit Fotos Polaroid Personalizadas",                     price:39.90, isNotebook:false, category:"presente", images:["polaroid.jpg"],        tag:"Mem\u00f3rias"},
+  { id:8, name:"Caderno e crach\u00e1 do congresso \u2018Felicidade Eterna\u2019", price:69.90, isNotebook:true, category:"notebook", images:["1uM6Z.jpg"], tag:"Especial" }
+];
+
+let cart = [];
+let currentFilter = "all";
+let searchTerm = "";
+
+function loadCart() {
+  const saved = localStorage.getItem('fortart_cart');
+  if (saved) { try { cart = JSON.parse(saved); } catch(e) { cart = []; } }
+  updateCartUI();
+}
+function saveCart() { localStorage.setItem('fortart_cart', JSON.stringify(cart)); }
+
+function updateCartItemQty(id, change) {
+  if (cart[id]) {
+    const newQty = cart[id].quantity + change;
+    if (newQty > 0) cart[id].quantity = newQty;
+    else cart.splice(id, 1);
+    saveCart(); updateCartUI();
+  }
+}
+
+function addToCart(product, quantity, customization) {
+  const existingIndex = cart.findIndex(item =>
+    item.id === product.id && JSON.stringify(item.customization) === JSON.stringify(customization)
+  );
+  if (existingIndex !== -1) cart[existingIndex].quantity += quantity;
+  else cart.push({ id:product.id, name:product.name, price:product.price, quantity, customization, images:product.images });
+  saveCart(); updateCartUI();
+  const toast = document.createElement('div');
+  toast.className = 'toast-msg';
+  toast.innerHTML = `<i class="fas fa-check-circle"></i><span><strong>${product.name}</strong> adicionado!</span>`;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 2500);
+  const cartBtn = document.querySelector('.cart-btn');
+  cartBtn.style.animation = 'cartPop 0.4s ease';
+  setTimeout(() => cartBtn.style.animation = '', 400);
+  setTimeout(() => openCart(), 500);
+}
+
+function updateCartUI() {
+  const totalItems = cart.reduce((s, i) => s + i.quantity, 0);
+  document.getElementById('cartCount').innerText = totalItems;
+  const cartContainer = document.getElementById('cartItemsList');
+  if (cart.length === 0) {
+    cartContainer.innerHTML = `<div class="empty-cart"><i class="fas fa-shopping-bag"></i><p>Seu carrinho está vazio</p><small>Adicione produtos para começar seu pedido</small></div>`;
+    document.getElementById('cartTotal').innerText = 'R$ 0,00';
+    document.getElementById('cartSubtotal').innerText = 'R$ 0,00';
+    return;
+  }
+  let itemsHtml = '', total = 0;
+  cart.forEach((item, idx) => {
+    const subtotal = item.price * item.quantity; total += subtotal;
+    const imgSrc = item.images?.[0] || 'https://placehold.co/80x80?text=produto';
+    const customText = item.customization ? `${item.customization.coverType} · ${item.customization.paperType}` : '';
+    itemsHtml += `
+      <div class="cart-item">
+        <div class="cart-item-image"><img src="${imgSrc}" onerror="this.src='https://placehold.co/80x80'"></div>
+        <div class="cart-item-details">
+          <div class="cart-item-name">${item.name}</div>
+          ${customText ? `<div class="cart-item-custom">📘 ${customText}</div>` : ''}
+          <div class="cart-item-controls">
+            <div class="cart-item-qty">
+              <button class="qty-minus" data-index="${idx}">−</button>
+              <span>${item.quantity}</span>
+              <button class="qty-plus" data-index="${idx}">+</button>
+            </div>
+            <button class="cart-item-remove" data-index="${idx}"><i class="fas fa-trash-alt"></i></button>
+          </div>
+        </div>
+        <div class="cart-item-subtotal">R$ ${subtotal.toFixed(2)}</div>
+      </div>`;
+  });
+  cartContainer.innerHTML = itemsHtml;
+  const fmt = `R$ ${total.toFixed(2)}`;
+  document.getElementById('cartTotal').innerText = fmt;
+  document.getElementById('cartSubtotal').innerText = fmt;
+  document.querySelectorAll('.qty-plus').forEach(btn => btn.addEventListener('click', () => updateCartItemQty(parseInt(btn.dataset.index), 1)));
+  document.querySelectorAll('.qty-minus').forEach(btn => btn.addEventListener('click', () => updateCartItemQty(parseInt(btn.dataset.index), -1)));
+  document.querySelectorAll('.cart-item-remove').forEach(btn => btn.addEventListener('click', () => { cart.splice(parseInt(btn.dataset.index),1); saveCart(); updateCartUI(); }));
+}
+
+function clearCart() { if (cart.length) { cart = []; saveCart(); updateCartUI(); } }
+
+let currentImagesList = [], currentImageIndex = 0;
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const modalCounter = document.getElementById('modalCounter');
+const modalPrev = document.getElementById('modalPrev');
+const modalNext = document.getElementById('modalNext');
+
+function openModal(images, index) {
+  if (!images?.length) return;
+  currentImagesList = images; currentImageIndex = index;
+  updateModalImage(); modal.classList.add('active');
+  const hasMultiple = images.length > 1;
+  modalPrev.style.display = hasMultiple ? 'flex' : 'none';
+  modalNext.style.display = hasMultiple ? 'flex' : 'none';
+  modalCounter.style.display = hasMultiple ? 'block' : 'none';
+}
+function updateModalImage() {
+  modalImg.src = currentImagesList[currentImageIndex];
+  modalCounter.innerText = `${currentImageIndex + 1} / ${currentImagesList.length}`;
+}
+function nextImage() { if (currentImagesList.length > 1) { currentImageIndex = (currentImageIndex+1) % currentImagesList.length; updateModalImage(); } }
+function prevImage() { if (currentImagesList.length > 1) { currentImageIndex = (currentImageIndex-1+currentImagesList.length) % currentImagesList.length; updateModalImage(); } }
+
+modalPrev.addEventListener('click', e => { e.stopPropagation(); prevImage(); });
+modalNext.addEventListener('click', e => { e.stopPropagation(); nextImage(); });
+document.querySelector('.close-modal').addEventListener('click', () => modal.classList.remove('active'));
+modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+document.addEventListener('keydown', e => {
+  if (!modal.classList.contains('active')) return;
+  if (e.key === 'ArrowRight') nextImage();
+  if (e.key === 'ArrowLeft') prevImage();
+  if (e.key === 'Escape') modal.classList.remove('active');
+});
+
+class ImageGallery {
+  constructor(container, images) { this.container = container; this.images = images; this.currentIndex = 0; this.render(); }
+  render() {
+    const hasMultiple = this.images.length > 1;
+    const navHtml = hasMultiple ? `
+      <div class="gallery-nav">
+        <button class="nav-arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <div class="thumbnails">${this.images.map((src,i) => `<img src="${src}" class="thumb${i===0?' active':''}" data-index="${i}">`).join('')}</div>
+        <button class="nav-arrow next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>` : '';
+    this.container.innerHTML = `<div class="gallery-main"><img class="main-img" src="${this.images[0]}" alt="produto"></div>${navHtml}`;
+    this.container.querySelector('.main-img').addEventListener('click', () => openModal(this.images, this.currentIndex));
+    if (hasMultiple) {
+      this.container.querySelectorAll('.thumb').forEach((thumb,idx) => thumb.addEventListener('click', () => this.setImage(idx)));
+      this.container.querySelector('.prev-btn').addEventListener('click', () => this.prev());
+      this.container.querySelector('.next-btn').addEventListener('click', () => this.next());
+    }
+  }
+  setImage(index) {
+    this.currentIndex = index;
+    this.container.querySelector('.main-img').src = this.images[index];
+    this.container.querySelectorAll('.thumb').forEach((t,i) => t.classList.toggle('active', i === index));
+  }
+  prev() { this.setImage((this.currentIndex-1+this.images.length) % this.images.length); }
+  next() { this.setImage((this.currentIndex+1) % this.images.length); }
+}
+
+function renderProducts() {
+  const container = document.getElementById('productsContainer');
+  const filtered = productsData.filter(p =>
+    (currentFilter === 'all' || p.category === currentFilter) &&
+    p.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  container.innerHTML = '';
+  if (filtered.length === 0) {
+    container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:#9B7B66;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;">Nenhum produto encontrado…</div>`;
+    return;
+  }
+  filtered.forEach((prod, i) => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.style.animationDelay = `${i * 0.07}s`;
+    const galleryId = `gallery-${prod.id}`;
+    const coverOptions = prod.isNotebook ? `
+      <div class="custom-group">
+        <span class="custom-label">Tipo de capa</span>
+        <div class="custom-pills">
+          <span class="custom-pill selected" data-type="cover" data-id="${prod.id}" data-value="Capa Dura">Dura</span>
+          <span class="custom-pill" data-type="cover" data-id="${prod.id}" data-value="Capa Flexível">Flexível</span>
+          <span class="custom-pill" data-type="cover" data-id="${prod.id}" data-value="Capa Soft Touch">Soft Touch</span>
+        </div>
+      </div>
+      <div class="custom-group">
+        <span class="custom-label">Tipo de folha</span>
+        <div class="custom-pills">
+          <span class="custom-pill selected" data-type="paper" data-id="${prod.id}" data-value="Pautada">Pautada</span>
+          <span class="custom-pill" data-type="paper" data-id="${prod.id}" data-value="Pontilhada">Pontilhada</span>
+          <span class="custom-pill" data-type="paper" data-id="${prod.id}" data-value="Quadriculada">Quadriculada</span>
+          <span class="custom-pill" data-type="paper" data-id="${prod.id}" data-value="Lisa">Lisa</span>
+        </div>
+      </div>` : '';
+    const customizationHtml = prod.isNotebook ? `
+      <div class="custom-options" id="custom-${prod.id}">
+        <div class="custom-header">
+          <div class="custom-header-icon"><i class="fas fa-sliders-h"></i></div>
+          <span>Personalize do seu jeito</span>
+        </div>
+        ${coverOptions}
+      </div>` : '';
+    card.innerHTML = `
+      <div class="product-card-top">
+        <div class="card-tag ${prod.isNotebook ? 'handmade' : ''}">${prod.tag}</div>
+        <button class="card-wish" data-id="${prod.id}"><i class="far fa-heart"></i></button>
+        <div id="${galleryId}" class="gallery-container"></div>
+      </div>
+      <div class="product-card-bottom">
+        <div class="product-meta">
+          <div class="product-title">${prod.name}</div>
+          <div class="product-price">R$&nbsp;${prod.price.toFixed(2).replace('.',',')}<small>à vista</small></div>
+        </div>
+        <div class="product-divider"></div>
+        ${customizationHtml}
+        <div class="card-actions" style="margin-top:${prod.isNotebook?'16px':'0'};">
+          <div class="qty-wrap">
+            <button class="qty-btn qty-down" data-id="${prod.id}">−</button>
+            <input type="number" min="1" value="1" class="qty-input" data-id="${prod.id}">
+            <button class="qty-btn qty-up" data-id="${prod.id}">+</button>
+          </div>
+          <button class="btn-add" data-id="${prod.id}"><i class="fas fa-plus"></i>Adicionar</button>
+        </div>
+      </div>`;
+    container.appendChild(card);
+    new ImageGallery(document.getElementById(galleryId), prod.images);
+    card.querySelector('.qty-up').addEventListener('click', () => {
+      const inp = card.querySelector(`.qty-input[data-id="${prod.id}"]`);
+      inp.value = parseInt(inp.value) + 1;
+    });
+    card.querySelector('.qty-down').addEventListener('click', () => {
+      const inp = card.querySelector(`.qty-input[data-id="${prod.id}"]`);
+      if (parseInt(inp.value) > 1) inp.value = parseInt(inp.value) - 1;
+    });
+    card.querySelectorAll('.custom-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const type = pill.dataset.type;
+        card.querySelectorAll(`.custom-pill[data-type="${type}"][data-id="${prod.id}"]`).forEach(p => p.classList.remove('selected'));
+        pill.classList.add('selected');
+      });
+    });
+    card.querySelector('.card-wish').addEventListener('click', function() {
+      this.classList.toggle('active');
+      this.innerHTML = this.classList.contains('active') ? '<i class="fas fa-heart"></i>' : '<i class="far fa-heart"></i>';
+    });
+    card.querySelector('.btn-add').addEventListener('click', () => {
+      const qty = parseInt(card.querySelector(`.qty-input[data-id="${prod.id}"]`).value) || 1;
+      let customization = null;
+      if (prod.isNotebook) {
+        const cover = card.querySelector(`.custom-pill[data-type="cover"].selected`)?.dataset.value || "Capa Dura";
+        const paper = card.querySelector(`.custom-pill[data-type="paper"].selected`)?.dataset.value || "Pautada";
+        customization = { coverType: cover, paperType: paper };
+      }
+      addToCart(prod, qty, customization);
+    });
+  });
+}
+
+function generateWhatsAppMessage() {
+  if (!cart.length) return null;
+  let msg = "🛍️ *PEDIDO FORT.ART PAPELARIA*%0A%0A", total = 0;
+  cart.forEach(item => {
+    const subtotal = item.price * item.quantity; total += subtotal;
+    let custom = item.customization ? ` _(Capa: ${item.customization.coverType}, Folha: ${item.customization.paperType})_` : '';
+    msg += `📓 *${item.name}*${custom}%0A   ➜ ${item.quantity} un. x R$ ${item.price.toFixed(2)} = R$ ${subtotal.toFixed(2)}%0A`;
+  });
+  msg += `%0A💰 *TOTAL: R$ ${total.toFixed(2)}*%0A%0A📍 Rua Expedito Ferreira de Lima, Cambuí · SJRP%0A👋 Quero finalizar minha compra!`;
+  return msg;
+}
+function sendToWhatsApp() { if (!cart.length) return; window.open(`https://wa.me/5511987524960?text=${generateWhatsAppMessage()}`, '_blank'); }
+function openCart() { document.body.classList.add('cart-open'); }
+function closeCart() { document.body.classList.remove('cart-open'); }
+
+document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter = btn.dataset.filter;
+  renderProducts();
+}));
+document.getElementById('searchInput').addEventListener('input', e => { searchTerm = e.target.value; renderProducts(); });
+document.getElementById('cartIconBtn').addEventListener('click', openCart);
+document.getElementById('closeCartBtn').addEventListener('click', closeCart);
+document.getElementById('cartOverlay').addEventListener('click', closeCart);
+document.getElementById('clearCartBtn').addEventListener('click', clearCart);
+document.getElementById('sendWhatsBtn').addEventListener('click', () => { sendToWhatsApp(); closeCart(); });
+
+const backBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => backBtn.classList.toggle('show', window.scrollY > 400));
+backBtn.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60));
+
+loadCart();
+setTimeout(renderProducts, 600);
+</script>
+</body>
+</html>
