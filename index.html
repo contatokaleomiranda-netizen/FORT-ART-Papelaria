@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fort.Art Papelaria e Presentes — Espaço criativo, acolhedor e ponto oficial de venda e troca do Álbum da Copa 2026. Conheça nossa loja!">
-    <meta name="keywords" content="papelaria, presentes criativos, álbum copa 2026, figurinhas, troca de figurinhas, papelaria premium, Fort.Art">
+    <meta name="description" content="Fort.Art Papelaria e Presentes — Espaço criativo, acolhedor e ponto oficial de venda e troca do Álbum da Copa 2026. Venha nos visitar e completar sua coleção!">
+    <meta name="keywords" content="papelaria, presentes criativos, álbum copa 2026, figurinhas, troca de figurinhas, papelaria premium, Fort.Art, papelaria criativa">
     <meta name="author" content="Fort.Art Papelaria e Presentes">
-    <meta name="theme-color" content="#0d0d0d">
+    <meta name="theme-color" content="#0A0A0A">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://fortart.com.br/">
 
     <meta property="og:title" content="Fort.Art Papelaria e Presentes | Álbum Copa 2026">
-    <meta property="og:description" content="Papelaria criativa com atendimento diferenciado. Ponto oficial do Álbum da Copa 2026. Venha nos visitar!">
+    <meta property="og:description" content="Papelaria criativa, acolhedora e ponto oficial de venda e troca do Álbum da Copa 2026. Conheça nosso espaço!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fortart.com.br/">
     <meta property="og:image" content="https://fortart.com.br/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="pt_BR">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fort.Art Papelaria e Presentes">
-    <meta name="twitter:description" content="Ponto oficial de venda e troca do Álbum da Copa 2026. Conheça nossa loja!">
+    <meta name="twitter:description" content="Ponto oficial de venda e troca do Álbum da Copa 2026. Venha nos visitar!">
     <meta name="twitter:image" content="https://fortart.com.br/og-image.jpg">
 
     <script type="application/ld+json">
@@ -29,11 +28,19 @@
             "@context": "https://schema.org",
             "@type": "Store",
             "name": "Fort.Art Papelaria e Presentes",
-            "description": "Papelaria criativa, presentes e ponto oficial de troca do Álbum da Copa 2026.",
+            "image": "https://fortart.com.br/logo.jpg",
+            "description": "Papelaria criativa, presentes especiais e ponto oficial de troca do Álbum da Copa 2026. Ambiente acolhedor e atendimento diferenciado.",
             "telephone": "+5517981276335",
-            "address": { "@type": "PostalAddress", "addressCountry": "BR" },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Principal, 123",
+                "addressLocality": "São José do Rio Preto",
+                "addressRegion": "SP",
+                "postalCode": "15000-000",
+                "addressCountry": "BR"
+            },
             "sameAs": ["https://www.instagram.com/fort_art_papelaria_e_presentes"],
-            "openingHours": "Mo-Sa"
+            "openingHours": "Mo-Sa 09:00-18:00"
         }
     </script>
 
@@ -42,441 +49,566 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200;14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Outfit:wght@200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- ✅ 9. Fontes otimizadas: apenas pesos realmente utilizados -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Outfit:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- ✅ 3. Fallback para preloader quando JS desabilitado -->
+    <noscript><style>.loader{display:none}</style></noscript>
 
     <style>
-        /* ============================================================
-           FORT.ART — DESIGN SYSTEM ULTRA PREMIUM
-           ============================================================ */
         :root {
-            --azul-vibrante: #3B82F6;
-            --azul-profundo: #1D4ED8;
-            --azul-claro: #93C5FD;
-            --rosa-claro: #F9A8C9;
-            --rosa-medio: #EC4899;
-            --rosa-profundo: #BE185D;
-            --amarelo-dourado: #FFD700;
-            --amarelo-brilho: #FEF08A;
+            --azul: #3B82F6;
+            --azul-escuro: #1D4ED8;
+            --azul-claro: #BFDBFE;
+            --rosa: #F9A8C9;
+            --rosa-escuro: #EC4899;
+            --dourado: #FFD700;
+            --dourado-claro: #FEF3C7;
             --preto: #0A0A0A;
-            --preto-suave: #1A1A1A;
             --branco: #FFFFFF;
-            --cinza-claro: #F5F5F7;
-            --cinza-medio: #E5E5EA;
-            --bg-primary: #FBFBFD;
-            --bg-secondary: #FFFFFF;
-            --text-primary: #0A0A0A;
-            --text-secondary: #4A4A5A;
-            --text-tertiary: #8E8E9A;
-            --border-subtle: rgba(0,0,0,0.06);
-            --border-medium: rgba(0,0,0,0.12);
-            --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-            --shadow-md: 0 8px 30px rgba(0,0,0,0.08);
-            --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
-            --shadow-xl: 0 32px 90px rgba(0,0,0,0.16);
-            --shadow-glow-azul: 0 0 40px rgba(59,130,246,0.25);
-            --shadow-glow-rosa: 0 0 40px rgba(236,72,153,0.25);
-            --shadow-glow-dourado: 0 0 40px rgba(255,215,0,0.3);
-            --glass-bg: rgba(255,255,255,0.35);
-            --glass-border: rgba(255,255,255,0.5);
-            --glass-blur: blur(20px);
-            --radius-xs: 8px;
-            --radius-sm: 12px;
-            --radius-md: 20px;
-            --radius-lg: 28px;
-            --radius-xl: 36px;
-            --radius-full: 9999px;
-            --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --transition-slow: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-mono: 'Space Grotesk', monospace;
+            --bg: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --texto: #0F172A;
+            --texto-sec: #475569;
+            --texto-terc: #94A3B8;
+            --borda: rgba(0,0,0,0.06);
+            --borda-media: rgba(0,0,0,0.12);
+            --sombra-xs: 0 1px 2px rgba(0,0,0,0.04);
+            --sombra-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --sombra-md: 0 8px 28px rgba(0,0,0,0.08);
+            --sombra-lg: 0 20px 60px rgba(0,0,0,0.11);
+            --sombra-xl: 0 32px 90px rgba(0,0,0,0.14);
+            /* ✅ 13. Fallback opaco para glass, depois o valor com transparência */
+            --glass-bg: rgba(255,255,255,0.85);
+            --glass-bg-blur: rgba(255,255,255,0.4);
+            --glass-border: rgba(255,255,255,0.55);
+            --glass-border-blur: rgba(255,255,255,0.55);
+            --glass-blur: blur(18px);
+            --raio-xs: 8px;
+            --raio-sm: 14px;
+            --raio-md: 22px;
+            --raio-lg: 30px;
+            --raio-xl: 38px;
+            --raio-full: 9999px;
+            --trans: 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+            --trans-slow: 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
         }
-
         [data-theme="dark"] {
-            --bg-primary: #0A0A0A;
-            --bg-secondary: #141416;
-            --text-primary: #F5F5F7;
-            --text-secondary: #B0B0BA;
-            --text-tertiary: #6E6E7A;
-            --border-subtle: rgba(255,255,255,0.06);
-            --border-medium: rgba(255,255,255,0.12);
-            --shadow-xs: 0 1px 2px rgba(0,0,0,0.2);
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
-            --shadow-md: 0 8px 30px rgba(0,0,0,0.4);
-            --shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
-            --shadow-xl: 0 32px 90px rgba(0,0,0,0.6);
-            --glass-bg: rgba(20,20,28,0.5);
+            --bg: #0A0A0A;
+            --bg-card: #18181B;
+            --texto: #F1F5F9;
+            --texto-sec: #CBD5E1;
+            --texto-terc: #64748B;
+            --borda: rgba(255,255,255,0.06);
+            --borda-media: rgba(255,255,255,0.12);
+            --sombra-xs: 0 1px 2px rgba(0,0,0,0.3);
+            --sombra-sm: 0 2px 8px rgba(0,0,0,0.35);
+            --sombra-md: 0 8px 28px rgba(0,0,0,0.45);
+            --sombra-lg: 0 20px 60px rgba(0,0,0,0.5);
+            --sombra-xl: 0 32px 90px rgba(0,0,0,0.6);
+            --glass-bg: rgba(24,24,27,0.85);
+            --glass-bg-blur: rgba(24,24,27,0.55);
             --glass-border: rgba(255,255,255,0.1);
+            --glass-border-blur: rgba(255,255,255,0.1);
         }
 
-        /* ============================================================
-           RESET & BASE
-           ============================================================ */
+        /* ✅ 10. prefers-reduced-motion: desativa TODAS as animações */
+        @media (prefers-reduced-motion: reduce) {
+            *,*::before,*::after{
+                animation-duration:0.01ms!important;
+                animation-iteration-count:1!important;
+                transition-duration:0.01ms!important;
+                scroll-behavior:auto!important;
+            }
+            .hero__glow,.copa__bg-img,.hero__visual-img,.hero__float-badge,
+            .whatsapp-float,.loader__dot,.loader__logo,.hero__eyebrow-dot{animation:none!important}
+        }
+
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-        body{font-family:var(--font-sans);background:var(--bg-primary);color:var(--text-primary);line-height:1.6;overflow-x:hidden;transition:background-color 0.5s ease, color 0.5s ease;font-weight:400}
+        html{
+            scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;
+            /* ✅ 11. Compatibilidade scrollbar Firefox */
+            scrollbar-width:thin;scrollbar-color:var(--borda-media) var(--bg);
+        }
+        body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--texto);line-height:1.6;overflow-x:hidden;transition:background-color 0.5s,color 0.5s;font-weight:400}
         img{display:block;max-width:100%;height:auto}
-        a{text-decoration:none;color:inherit;transition:color var(--transition-fast)}
+        a{text-decoration:none;color:inherit;transition:color var(--trans)}
         ul{list-style:none}
-        button{border:none;background:none;cursor:pointer;font:inherit;color:inherit}
-        input,textarea{font:inherit;color:inherit}
-        ::selection{background:var(--amarelo-dourado);color:var(--preto)}
-        :focus-visible{outline:3px solid var(--amarelo-dourado);outline-offset:3px;border-radius:var(--radius-xs)}
+        button,input,textarea{font:inherit;color:inherit;border:none;background:none}
+        button{cursor:pointer}
+        ::selection{background:var(--dourado);color:var(--preto)}
+        :focus-visible{outline:3px solid var(--dourado);outline-offset:3px;border-radius:var(--raio-xs)}
+        ::-webkit-scrollbar{width:7px}
+        ::-webkit-scrollbar-track{background:var(--bg)}
+        ::-webkit-scrollbar-thumb{background:var(--borda-media);border-radius:var(--raio-full)}
+        h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-height:1.15}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
 
-        /* ============================================================
-           SCROLL BAR CUSTOM
-           ============================================================ */
-        ::-webkit-scrollbar{width:8px}
-        ::-webkit-scrollbar-track{background:var(--bg-primary)}
-        ::-webkit-scrollbar-thumb{background:var(--border-medium);border-radius:var(--radius-full)}
-        ::-webkit-scrollbar-thumb:hover{background:var(--text-tertiary)}
+        /* ✅ 1. Offset para scroll compensar navbar fixa */
+        section[id]{scroll-margin-top:100px}
 
-        /* ============================================================
-           SCROLL PROGRESS BAR
-           ============================================================ */
-        .scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(to right, var(--azul-vibrante), var(--rosa-medio), var(--amarelo-dourado));z-index:10000;width:0;transition:width 0.1s linear;box-shadow:0 0 16px rgba(255,215,0,0.6)}
+        /* SCROLL PROGRESS */
+        .scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(to right,var(--azul),var(--rosa-escuro),var(--dourado));z-index:10000;width:0;transition:width 0.1s linear;box-shadow:0 0 14px rgba(255,215,0,0.5)}
 
-        /* ============================================================
-           PRELOADER CINEMATOGRÁFICO
-           ============================================================ */
-        .loader{position:fixed;inset:0;background:var(--preto);z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity 0.7s ease, visibility 0.7s ease}
+        /* PRELOADER */
+        .loader{position:fixed;inset:0;background:var(--preto);z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity 0.6s,visibility 0.6s}
         .loader--hidden{opacity:0;visibility:hidden;pointer-events:none}
-        .loader__inner{text-align:center}
-        .loader__logo{width:140px;margin:0 auto 2rem;animation:loaderPulse 2s ease infinite;filter:drop-shadow(0 0 30px rgba(255,215,0,0.5))}
-        @keyframes loaderPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.06);opacity:0.85}}
-        .loader__rings{display:flex;gap:8px;justify-content:center}
-        .loader__ring{width:10px;height:10px;border-radius:50%;animation:loaderBounce 1.2s ease infinite}
-        .loader__ring:nth-child(1){background:var(--azul-vibrante);animation-delay:0s}
-        .loader__ring:nth-child(2){background:var(--rosa-claro);animation-delay:0.2s}
-        .loader__ring:nth-child(3){background:var(--amarelo-dourado);animation-delay:0.4s}
-        @keyframes loaderBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+        .loader__logo{width:130px;animation:loaderPulse 2s infinite;filter:drop-shadow(0 0 25px rgba(255,215,0,0.45))}
+        @keyframes loaderPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+        .loader__dots{display:flex;gap:8px;justify-content:center;margin-top:1.5rem}
+        .loader__dot{width:10px;height:10px;border-radius:50%;animation:loaderBounce 1.2s infinite}
+        .loader__dot:nth-child(1){background:var(--azul);animation-delay:0s}
+        .loader__dot:nth-child(2){background:var(--rosa);animation-delay:0.2s}
+        .loader__dot:nth-child(3){background:var(--dourado);animation-delay:0.4s}
+        @keyframes loaderBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 
-        /* ============================================================
-           NAVBAR ULTRA PREMIUM
-           ============================================================ */
-        .navbar{position:fixed;top:0;left:0;width:100%;z-index:5000;padding:1rem 0;transition:all 0.45s ease}
-        .navbar--scrolled{background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border-bottom:1px solid var(--glass-border);padding:0.7rem 0;box-shadow:var(--shadow-md)}
-        .navbar__container{max-width:1440px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between}
-        .navbar__logo-img{height:52px;transition:transform var(--transition)}
+        /* NAVBAR */
+        .navbar{position:fixed;top:0;left:0;width:100%;z-index:5000;padding:1rem 0;transition:all 0.4s}
+        .navbar--scrolled{
+            /* ✅ 13. Fallback sólido + versão com blur */
+            background:var(--glass-bg);
+            background:var(--glass-bg-blur);
+            backdrop-filter:var(--glass-blur);
+            -webkit-backdrop-filter:var(--glass-blur);
+            border-bottom:1px solid var(--glass-border);
+            padding:0.7rem 0;box-shadow:var(--sombra-sm);
+        }
+        .navbar__container{max-width:1400px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+        .navbar__logo-img{height:48px;transition:transform var(--trans)}
         .navbar__logo-img:hover{transform:scale(1.06)}
-        .navbar__nav{display:flex;align-items:center;gap:2.8rem}
-        .navbar__link{font-weight:500;font-size:0.93rem;color:var(--text-secondary);position:relative;padding:0.4rem 0;letter-spacing:0.3px;transition:color var(--transition)}
-        .navbar__link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2.5px;background:var(--amarelo-dourado);border-radius:var(--radius-full);transition:width var(--transition)}
-        .navbar__link:hover{color:var(--text-primary)}
+        .navbar__nav{display:flex;align-items:center;gap:2.2rem}
+        .navbar__link{font-weight:500;font-size:0.92rem;color:var(--texto-sec);position:relative;padding:0.35rem 0;letter-spacing:0.3px;transition:color var(--trans)}
+        .navbar__link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2.5px;background:var(--dourado);border-radius:var(--raio-full);transition:width var(--trans)}
+        .navbar__link:hover{color:var(--texto)}
         .navbar__link:hover::after{width:100%}
-        .navbar__link--active{color:var(--azul-vibrante)}
-        .navbar__link--active::after{width:100%;background:var(--azul-vibrante)}
-        .navbar__actions{display:flex;align-items:center;gap:0.8rem}
-        .btn-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--bg-secondary);border:1.5px solid var(--border-medium);transition:all var(--transition);box-shadow:var(--shadow-xs);position:relative}
-        .btn-icon:hover{background:var(--bg-primary);border-color:var(--amarelo-dourado);box-shadow:var(--shadow-glow-dourado);transform:translateY(-2px)}
-        .btn-icon svg{width:18px;height:18px}
-        .theme-toggle__icon{position:absolute;transition:opacity 0.3s, transform 0.3s}
+        .navbar__link--active{color:var(--azul)!important}
+        .navbar__link--active::after{width:100%;background:var(--azul)}
+        .navbar__actions{display:flex;align-items:center;gap:0.7rem}
+        .btn-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--bg-card);border:1.5px solid var(--borda-media);transition:all var(--trans);box-shadow:var(--sombra-xs);position:relative}
+        .btn-icon:hover{background:var(--bg);border-color:var(--dourado);box-shadow:0 0 20px rgba(255,215,0,0.25);transform:translateY(-2px)}
+        .btn-icon svg{width:17px;height:17px}
+        .theme-toggle__icon{position:absolute;transition:opacity 0.3s,transform 0.3s}
         [data-theme="light"] .theme-toggle__icon--moon{opacity:0;transform:scale(0.5) rotate(-90deg)}
         [data-theme="dark"] .theme-toggle__icon--sun{opacity:0;transform:scale(0.5) rotate(90deg)}
-        .navbar__insta-btn{background:linear-gradient(135deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);color:white;border:none;box-shadow:0 4px 16px rgba(225,48,108,0.35)}
-        .navbar__insta-btn:hover{box-shadow:0 8px 28px rgba(225,48,108,0.55);transform:translateY(-2px) scale(1.05)}
-        .navbar__hamburger{display:none;flex-direction:column;gap:5px;padding:10px;border-radius:var(--radius-sm);background:var(--bg-secondary);box-shadow:var(--shadow-sm);border:1.5px solid var(--border-medium)}
-        .navbar__hamburger-line{width:24px;height:2.5px;background:var(--text-primary);border-radius:var(--radius-full);transition:all 0.3s}
-        @media(max-width:1080px){.navbar__nav{display:none}.navbar__hamburger{display:flex}}
+        .navbar__insta-btn{background:linear-gradient(135deg,#405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D);color:white;border:none;box-shadow:0 4px 14px rgba(225,48,108,0.3)}
+        .navbar__hamburger{display:none;flex-direction:column;gap:5px;padding:10px;border-radius:var(--raio-sm);background:var(--bg-card);box-shadow:var(--sombra-sm);border:1.5px solid var(--borda-media)}
+        .navbar__hamburger-line{width:22px;height:2.5px;background:var(--texto);border-radius:var(--raio-full);transition:0.3s}
+        @media(max-width:1024px){.navbar__nav{display:none}.navbar__hamburger{display:flex}}
 
-        /* ============================================================
-           MOBILE MENU
-           ============================================================ */
+        /* MOBILE MENU */
         .mobile-menu{position:fixed;inset:0;z-index:6000;visibility:hidden;pointer-events:none}
         .mobile-menu--open{visibility:visible;pointer-events:auto}
         .mobile-menu__backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);opacity:0;transition:opacity 0.4s}
         .mobile-menu--open .mobile-menu__backdrop{opacity:1}
-        .mobile-menu__panel{position:absolute;top:0;right:0;width:min(88%, 440px);height:100%;background:var(--bg-secondary);padding:3.5rem 2.5rem;transform:translateX(100%);transition:transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);display:flex;flex-direction:column;gap:3rem;box-shadow:-20px 0 60px rgba(0,0,0,0.2)}
+        .mobile-menu__panel{position:absolute;top:0;right:0;width:min(86%,420px);height:100%;background:var(--bg-card);padding:3rem 2.5rem;transform:translateX(100%);transition:transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);display:flex;flex-direction:column;gap:2.5rem;box-shadow:-16px 0 50px rgba(0,0,0,0.2)}
         .mobile-menu--open .mobile-menu__panel{transform:translateX(0)}
-        .mobile-menu__close{font-size:2.8rem;align-self:flex-end;color:var(--text-primary);transition:transform 0.3s;line-height:1}
+        .mobile-menu__close{font-size:2.6rem;align-self:flex-end;color:var(--texto);transition:transform 0.3s;line-height:1}
         .mobile-menu__close:hover{transform:rotate(90deg)}
-        .mobile-menu__link{display:block;font-size:1.4rem;font-weight:600;padding:1rem 0;border-bottom:1px solid var(--border-medium);color:var(--text-primary);transition:all 0.3s}
-        .mobile-menu__link:hover{color:var(--azul-vibrante);padding-left:1rem}
-        .mobile-menu__footer{margin-top:auto;display:flex;flex-direction:column;gap:1rem;padding-top:2rem;border-top:1px solid var(--border-medium)}
-        .mobile-menu__cta{display:flex;align-items:center;gap:0.8rem;padding:1rem 1.5rem;border-radius:var(--radius-full);font-weight:600;text-align:center;justify-content:center;transition:all var(--transition)}
+        .mobile-menu__link{display:block;font-size:1.3rem;font-weight:600;padding:0.9rem 0;border-bottom:1px solid var(--borda-media);color:var(--texto);transition:all 0.3s}
+        .mobile-menu__link:hover{color:var(--azul);padding-left:0.8rem}
+        .mobile-menu__footer{margin-top:auto;display:flex;flex-direction:column;gap:0.8rem;padding-top:2rem;border-top:1px solid var(--borda-media)}
+        .mobile-menu__cta{display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.9rem;border-radius:var(--raio-full);font-weight:600;transition:all var(--trans)}
         .mobile-menu__whatsapp{background:#25D366;color:white}
-        .mobile-menu__insta{background:linear-gradient(135deg, #405DE6, #E1306C);color:white}
+        .mobile-menu__insta{background:linear-gradient(135deg,#405DE6,#E1306C);color:white}
 
-        /* ============================================================
-           HERO SECTION — CINEMATOGRÁFICA
-           ============================================================ */
-        .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:6rem 0 4rem;background:var(--bg-primary)}
-        .hero__bg-canvas{position:absolute;inset:0;z-index:0;pointer-events:none}
-        .hero__glow{position:absolute;border-radius:50%;filter:blur(160px);opacity:0.4;z-index:0;animation-duration:10s;animation-iteration-count:infinite;animation-direction:alternate;animation-timing-function:ease-in-out}
-        .hero__glow--1{width:800px;height:800px;background:var(--azul-vibrante);top:-250px;left:-200px;animation-name:glowFloat1}
-        .hero__glow--2{width:650px;height:650px;background:var(--rosa-claro);bottom:-200px;right:-150px;animation-name:glowFloat2;animation-delay:2s}
-        .hero__glow--3{width:500px;height:500px;background:var(--amarelo-dourado);top:40%;left:55%;transform:translate(-50%,-50%);animation-name:glowFloat3;animation-delay:4s}
-        @keyframes glowFloat1{0%{transform:translate(0,0) scale(1)}100%{transform:translate(50px,-50px) scale(1.12)}}
-        @keyframes glowFloat2{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-40px,40px) scale(1.1)}}
-        @keyframes glowFloat3{0%{transform:translate(-50%,-50%) scale(1)}100%{transform:translate(-50%,-50%) scale(1.15)}}
-        .hero__container{max-width:1440px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1.1fr 0.9fr;align-items:center;gap:5rem;width:100%;position:relative;z-index:2}
-        .hero__content{display:flex;flex-direction:column;gap:2.2rem}
-        .hero__eyebrow{display:inline-flex;align-items:center;gap:0.7rem;background:var(--glass-bg);backdrop-filter:var(--glass-blur);border:1.5px solid var(--amarelo-dourado);padding:0.55rem 1.4rem;border-radius:var(--radius-full);font-size:0.88rem;font-weight:700;color:var(--preto);width:fit-content;box-shadow:var(--shadow-glow-dourado);letter-spacing:0.5px}
-        .hero__eyebrow-dot{width:9px;height:9px;border-radius:50%;background:var(--amarelo-dourado);animation:pulse 2s infinite}
+        /* HERO */
+        /* ✅ 12. 100dvh com fallback para Safari mobile */
+        .hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:center;overflow:hidden;padding:5rem 0 3rem;background:var(--bg)}
+        .hero__glow{position:absolute;border-radius:50%;filter:blur(140px);opacity:0.35;z-index:0;animation-duration:10s;animation-iteration-count:infinite;animation-direction:alternate;animation-timing-function:ease-in-out}
+        .hero__glow--1{width:750px;height:750px;background:var(--azul);top:-220px;left:-180px;animation-name:glow1}
+        .hero__glow--2{width:600px;height:600px;background:var(--rosa);bottom:-180px;right:-130px;animation-name:glow2;animation-delay:3s}
+        .hero__glow--3{width:450px;height:450px;background:var(--dourado);top:45%;left:50%;transform:translate(-50%,-50%);animation-name:glow3;animation-delay:5s}
+        @keyframes glow1{0%{transform:translate(0,0) scale(1)}100%{transform:translate(45px,-45px) scale(1.1)}}
+        @keyframes glow2{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-35px,35px) scale(1.08)}}
+        @keyframes glow3{0%{transform:translate(-50%,-50%) scale(1)}100%{transform:translate(-50%,-50%) scale(1.13)}}
+        .hero__container{max-width:1400px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1.1fr 0.9fr;align-items:center;gap:4rem;width:100%;position:relative;z-index:2}
+        .hero__content{display:flex;flex-direction:column;gap:1.8rem}
+        /* ✅ 2. Badge com cor adaptável aos dois temas */
+        .hero__eyebrow{display:inline-flex;align-items:center;gap:0.6rem;
+            background:var(--glass-bg);
+            background:var(--glass-bg-blur);
+            backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);
+            border:1.5px solid var(--dourado);padding:0.5rem 1.3rem;border-radius:var(--raio-full);
+            font-size:0.85rem;font-weight:700;color:var(--texto);
+            width:fit-content;box-shadow:0 0 20px rgba(255,215,0,0.2);letter-spacing:0.4px}
+        .hero__eyebrow-dot{width:9px;height:9px;border-radius:50%;background:var(--dourado);animation:pulse 2s infinite}
         @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,215,0,0.8)}70%{box-shadow:0 0 0 14px rgba(255,215,0,0)}100%{box-shadow:0 0 0 0 rgba(255,215,0,0)}}
-        .hero__title{font-family:var(--font-display);font-size:clamp(3.6rem, 7.5vw, 6.8rem);line-height:1.02;font-weight:800;color:var(--text-primary);letter-spacing:-0.02em}
-        .hero__title-accent{color:var(--amarelo-dourado);display:inline-block;animation:titleShine 3s ease infinite}
+        .hero__title{font-size:clamp(3.2rem,7vw,6.2rem);font-weight:800;letter-spacing:-0.02em;color:var(--texto)}
+        .hero__title-accent{color:var(--dourado);animation:titleShine 3s infinite}
         @keyframes titleShine{0%,100%{filter:brightness(1)}50%{filter:brightness(1.3)}}
-        .hero__title-sub{display:block;font-family:var(--font-sans);font-size:clamp(1.2rem, 2.5vw, 1.8rem);font-weight:300;color:var(--text-secondary);letter-spacing:2.5px;margin-top:0.4rem}
-        .hero__desc{font-size:clamp(1.05rem, 1.4vw, 1.2rem);max-width:520px;color:var(--text-secondary);line-height:1.75}
-        .hero__ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.5rem}
-        .hero__visual{position:relative;display:flex;justify-content:center;align-items:center}
-        .hero__visual-frame{position:relative;width:100%;max-width:480px}
-        .hero__visual-img{width:100%;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl), 0 0 0 4px var(--amarelo-dourado), 0 0 0 12px rgba(255,215,0,0.2);animation:heroFloat 6s ease infinite alternate;transition:transform var(--transition-slow)}
-        .hero__visual-img:hover{transform:scale(1.03)}
-        @keyframes heroFloat{0%{transform:translateY(0) rotate(0deg)}100%{transform:translateY(-18px) rotate(1.5deg)}}
-        .hero__float-badge{position:absolute;background:var(--glass-bg);backdrop-filter:var(--glass-blur);padding:0.7rem 1.4rem;border-radius:var(--radius-full);font-weight:700;font-size:0.9rem;box-shadow:var(--shadow-lg);border:1.5px solid var(--glass-border);animation:badgeFloat 4s ease infinite alternate}
-        .hero__float-badge--1{top:8%;right:-8%;animation-delay:0s}
-        .hero__float-badge--2{bottom:10%;left:-10%;animation-delay:1.5s}
-        @keyframes badgeFloat{0%{transform:translateY(0)}100%{transform:translateY(-12px)}}
+        .hero__title-sub{display:block;font-family:'Outfit',sans-serif;font-size:clamp(1.1rem,2.2vw,1.6rem);font-weight:300;color:var(--texto-sec);letter-spacing:2.5px;margin-top:0.3rem}
+        .hero__desc{font-size:clamp(1rem,1.3vw,1.15rem);max-width:500px;color:var(--texto-sec);line-height:1.7}
+        .hero__ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.3rem}
+        .hero__visual{position:relative;display:flex;justify-content:center}
+        .hero__visual-frame{width:100%;max-width:460px}
+        .hero__visual-img{width:100%;border-radius:var(--raio-xl);box-shadow:var(--sombra-xl),0 0 0 4px var(--dourado),0 0 0 12px rgba(255,215,0,0.18);animation:heroFloat 6s infinite alternate}
+        @keyframes heroFloat{0%{transform:translateY(0) rotate(0deg)}100%{transform:translateY(-16px) rotate(1.5deg)}}
+        .hero__float-badge{position:absolute;
+            background:var(--glass-bg);
+            background:var(--glass-bg-blur);
+            backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);
+            padding:0.6rem 1.3rem;border-radius:var(--raio-full);font-weight:700;font-size:0.85rem;
+            box-shadow:var(--sombra-lg);border:1.5px solid var(--glass-border);animation:badgeFloat 4s infinite alternate}
+        .hero__float-badge--1{top:6%;right:-6%;animation-delay:0s}
+        .hero__float-badge--2{bottom:8%;left:-8%;animation-delay:1.5s}
+        @keyframes badgeFloat{0%{transform:translateY(0)}100%{transform:translateY(-10px)}}
         @media(max-width:900px){
-            .hero__container{grid-template-columns:1fr;text-align:center;gap:3rem}
+            .hero__container{grid-template-columns:1fr;text-align:center;gap:2.5rem}
             .hero__visual{order:-1}
-            .hero__visual-frame{max-width:320px;margin:0 auto}
+            .hero__visual-frame{max-width:280px;margin:0 auto}
             .hero__float-badge{display:none}
             .hero__ctas{justify-content:center}
             .hero__desc{max-width:100%}
         }
 
-        /* ============================================================
-           BOTÕES GLOBAIS
-           ============================================================ */
-        .btn{display:inline-flex;align-items:center;gap:0.7rem;padding:1rem 2.4rem;border-radius:var(--radius-full);font-weight:600;font-size:0.98rem;letter-spacing:0.3px;transition:all var(--transition);position:relative;overflow:hidden;white-space:nowrap}
-        .btn::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.2);opacity:0;transition:opacity var(--transition)}
+        /* BOTÕES */
+        .btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.95rem 2.2rem;border-radius:var(--raio-full);font-weight:600;font-size:0.95rem;letter-spacing:0.3px;transition:all var(--trans);white-space:nowrap;position:relative;overflow:hidden}
+        .btn::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.2);opacity:0;transition:opacity var(--trans)}
         .btn:hover::before{opacity:1}
-        .btn--primary{background:var(--azul-vibrante);color:white;box-shadow:0 8px 28px rgba(59,130,246,0.4)}
-        .btn--primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(59,130,246,0.55)}
-        .btn--glass{background:var(--glass-bg);backdrop-filter:var(--glass-blur);border:1.5px solid var(--glass-border);color:var(--text-primary)}
-        .btn--glass:hover{background:rgba(255,255,255,0.6);transform:translateY(-3px);box-shadow:var(--shadow-md)}
-        .btn--gold{background:var(--amarelo-dourado);color:var(--preto);font-weight:700;box-shadow:0 8px 28px rgba(255,215,0,0.4)}
-        .btn--gold:hover{background:#FFE44D;transform:translateY(-3px);box-shadow:0 16px 40px rgba(255,215,0,0.55)}
-        .btn--outline{background:transparent;border:2px solid var(--border-medium);color:var(--text-primary)}
-        .btn--outline:hover{background:var(--bg-secondary);border-color:var(--text-primary);transform:translateY(-3px)}
-        .btn--sm{padding:0.75rem 1.8rem;font-size:0.9rem}
+        .btn--primary{background:var(--azul);color:white;box-shadow:0 8px 26px rgba(59,130,246,0.4)}
+        .btn--primary:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(59,130,246,0.55)}
+        .btn--glass{
+            background:var(--glass-bg);
+            background:var(--glass-bg-blur);
+            backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);
+            border:1.5px solid var(--glass-border);color:var(--texto)}
+        .btn--glass:hover{background:rgba(255,255,255,0.55);transform:translateY(-3px)}
+        .btn--gold{background:var(--dourado);color:var(--preto);font-weight:700;box-shadow:0 8px 26px rgba(255,215,0,0.4)}
+        .btn--gold:hover{background:#FFE44D;transform:translateY(-3px);box-shadow:0 14px 36px rgba(255,215,0,0.55)}
+        .btn--outline{background:transparent;border:2px solid var(--borda-media);color:var(--texto)}
+        .btn--outline:hover{background:var(--bg-card);border-color:var(--texto);transform:translateY(-3px)}
+        .btn--sm{padding:0.7rem 1.6rem;font-size:0.88rem}
+        .btn--lg{padding:1.1rem 2.8rem;font-size:1.05rem}
 
-        /* ============================================================
-           SECTION UTILITIES
-           ============================================================ */
-        .section{position:relative;padding:8rem 2.5rem;overflow:hidden}
-        .section__container{max-width:1400px;margin:0 auto}
-        .section__header{text-align:center;margin-bottom:5rem}
-        .section__tag{display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1.3rem;border-radius:var(--radius-full);font-weight:700;font-size:0.85rem;letter-spacing:0.6px;text-transform:uppercase;margin-bottom:1.5rem}
-        .section__tag--blue{background:rgba(59,130,246,0.1);color:var(--azul-vibrante)}
-        .section__tag--rose{background:rgba(236,72,153,0.1);color:var(--rosa-medio)}
+        /* SECTIONS */
+        .section{padding:7rem 2rem;position:relative;overflow:hidden}
+        .section__container{max-width:1350px;margin:0 auto}
+        .section__header{text-align:center;margin-bottom:4.5rem}
+        .section__tag{display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 1.2rem;border-radius:var(--raio-full);font-weight:700;font-size:0.82rem;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:1.2rem}
+        .section__tag--blue{background:rgba(59,130,246,0.1);color:var(--azul)}
+        .section__tag--rose{background:rgba(236,72,153,0.1);color:var(--rosa-escuro)}
         .section__tag--gold{background:rgba(255,215,0,0.15);color:#B8860B}
-        .section__title{font-family:var(--font-display);font-size:clamp(2.8rem, 5.5vw, 4.5rem);font-weight:700;line-height:1.15;margin-bottom:1.5rem}
-        .section__subtitle{font-size:1.15rem;color:var(--text-secondary);max-width:650px;margin:0 auto;line-height:1.7}
+        .section__title{font-size:clamp(2.5rem,5vw,4rem);margin-bottom:1.2rem}
+        .section__subtitle{font-size:1.1rem;color:var(--texto-sec);max-width:600px;margin:0 auto;line-height:1.7}
 
-        /* ============================================================
-           SOBRE
-           ============================================================ */
-        .about{background:var(--bg-primary)}
-        .about__grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6rem}
-        .about__image-wrapper{position:relative;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl)}
-        .about__image{width:100%;height:540px;object-fit:cover;transition:transform 0.7s}
-        .about__image-wrapper:hover .about__image{transform:scale(1.04)}
-        .about__image-accent{position:absolute;inset:0;border:3px solid var(--amarelo-dourado);border-radius:var(--radius-xl);pointer-events:none;opacity:0.25}
-        .about__content{display:flex;flex-direction:column;gap:1.5rem}
-        .about__pills{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:0.5rem}
-        .about__pill{padding:0.6rem 1.3rem;border-radius:var(--radius-full);font-weight:600;font-size:0.9rem;background:var(--bg-secondary);border:1.5px solid var(--border-medium);transition:all var(--transition);cursor:default}
-        .about__pill:hover{background:var(--amarelo-dourado);border-color:var(--amarelo-dourado);color:var(--preto);transform:translateY(-3px);box-shadow:var(--shadow-glow-dourado)}
-        @media(max-width:900px){.about__grid{grid-template-columns:1fr;gap:3rem}.about__image{height:380px}.section__header{text-align:center}}
+        /* SOBRE */
+        .about__grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5rem}
+        .about__image-wrap{border-radius:var(--raio-xl);overflow:hidden;box-shadow:var(--sombra-xl);position:relative}
+        .about__image{width:100%;height:520px;object-fit:cover;transition:transform 0.7s}
+        .about__image-wrap:hover .about__image{transform:scale(1.04)}
+        .about__image-frame{position:absolute;inset:0;border:3px solid var(--dourado);border-radius:var(--raio-xl);pointer-events:none;opacity:0.25}
+        .about__pills{display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:0.5rem}
+        .about__pill{padding:0.55rem 1.2rem;border-radius:var(--raio-full);font-weight:600;font-size:0.88rem;background:var(--bg-card);border:1.5px solid var(--borda-media);transition:all var(--trans)}
+        .about__pill:hover{background:var(--dourado);border-color:var(--dourado);color:var(--preto);transform:translateY(-3px);box-shadow:0 0 22px rgba(255,215,0,0.3)}
+        @media(max-width:900px){.about__grid{grid-template-columns:1fr;gap:3rem}.about__image{height:350px}}
 
-        /* ============================================================
-           COPA 2026 — EXPERIÊNCIA IMERSIVA
-           ============================================================ */
-        .copa{position:relative;background:var(--preto);padding:10rem 2.5rem;overflow:hidden;min-height:90vh;display:flex;align-items:center}
-        .copa__bg{position:absolute;inset:0;z-index:0}
-        .copa__bg-img{width:100%;height:100%;object-fit:cover;opacity:0.22;filter:brightness(0.45) saturate(0.6);animation:copaSlowZoom 25s ease infinite alternate}
-        @keyframes copaSlowZoom{0%{transform:scale(1)}100%{transform:scale(1.1)}}
-        .copa__overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 40%, rgba(10,10,10,0.88) 100%);z-index:1}
-        .copa__container{position:relative;z-index:2;max-width:1400px;margin:0 auto;text-align:center}
-        .copa__title{font-family:var(--font-display);font-size:clamp(3.8rem, 9vw, 6.5rem);font-weight:800;background:linear-gradient(to bottom, var(--amarelo-dourado) 0%, #FFF8DC 60%, #FFD700 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.5rem;line-height:1.1}
-        .copa__subtitle{font-size:1.3rem;color:#E0E0E0;max-width:650px;margin:0 auto 3rem;line-height:1.7}
-        .copa__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2rem;margin-top:4rem}
-        .copa-card{background:rgba(255,255,255,0.06);backdrop-filter:blur(20px);border:1.5px solid rgba(255,215,0,0.2);border-radius:var(--radius-lg);padding:3rem 2rem;text-align:center;transition:all 0.4s;position:relative;overflow:hidden}
-        .copa-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at center, rgba(255,215,0,0.08), transparent 60%);opacity:0;transition:opacity 0.4s}
-        .copa-card:hover::before{opacity:1}
-        .copa-card:hover{transform:translateY(-12px);border-color:var(--amarelo-dourado);box-shadow:0 30px 70px rgba(255,215,0,0.2)}
-        .copa-card__icon{font-size:4rem;margin-bottom:1.5rem;display:block;transition:transform 0.4s}
-        .copa-card:hover .copa-card__icon{transform:scale(1.15)}
-        .copa-card h3{font-size:1.6rem;margin-bottom:0.8rem;color:white}
-        .copa-card p{color:#C0C0C0;font-size:0.95rem}
-        .copa-card__badge{position:absolute;top:1rem;right:1rem;background:var(--amarelo-dourado);color:var(--preto);padding:0.3rem 1rem;border-radius:var(--radius-full);font-weight:700;font-size:0.75rem;letter-spacing:0.5px}
+        /* COPA 2026 — SEÇÃO IMPACTANTE */
+      /* ========== COPA 2026 — FUNDO MAIS CLARO ========== */
+.copa {
+    position: relative;
+    background: var(--preto);
+    padding: 9rem 2rem;
+    overflow: hidden;
+    min-height: 85vh;
+    min-height: 85dvh;
+    display: flex;
+    align-items: center;
+}
 
-        /* ============================================================
-           GALERIA MASONRY EDITORIAL
-           ============================================================ */
-        .gallery{background:var(--bg-secondary)}
-        .gallery__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-auto-flow:dense;gap:1.5rem}
-        .gallery__item{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;box-shadow:var(--shadow-md);transition:all var(--transition)}
-        .gallery__item:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl)}
+/* Imagem de fundo do álbum — agora mais visível */
+.copa__bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;                        /* antes: 0.22 */
+    filter: brightness(0.6) saturate(0.7); /* antes: brightness(0.45) saturate(0.5) */
+    animation: copaZoom 22s infinite alternate;
+}
+
+@keyframes copaZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+
+/* Overlay mais leve para não encobrir o fundo */
+.copa__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, 
+        rgba(10,10,10,0.85) 0%,   /* antes: 0.95 */
+        rgba(10,10,10,0.2) 45%,    /* antes: 0.25 */
+        rgba(10,10,10,0.8) 100%);  /* antes: 0.9 */
+    z-index: 1;
+}
+
+.copa__container {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.copa__title {
+    font-size: clamp(3.5rem, 8vw, 5.8rem);
+    font-weight: 800;
+    background: linear-gradient(to bottom, var(--dourado) 0%, #FFF8DC 55%, var(--dourado) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+}
+
+.copa__subtitle {
+    font-size: 1.25rem;
+    color: #E2E8F0;
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.copa__highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0 3rem;
+}
+
+/* Card normal */
+.copa-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1.5px solid rgba(255,215,0,0.18);
+    border-radius: var(--raio-lg);
+    padding: 2.8rem 2rem;
+    text-align: center;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.copa-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,215,0,0.06), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.copa-card:hover::before {
+    opacity: 1;
+}
+
+.copa-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--dourado);
+    box-shadow: 0 25px 60px rgba(255,215,0,0.18);
+}
+
+.copa-card__icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.copa-card:hover .copa-card__icon {
+    transform: scale(1.12);
+}
+
+.copa-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+    color: white;
+}
+
+/* Texto dos cards — contraste melhorado */
+.copa-card p {
+    color: #F1F5F9;            /* antes: #E2E8F0, agora ainda mais claro */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Badge dourado */
+.copa-card__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--dourado);
+    color: var(--preto);
+    padding: 0.3rem 1rem;
+    border-radius: var(--raio-full);
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+}
+
+/* ★ CARD PROMOCIONAL — destaque especial ★ */
+.copa-card--promo {
+    border-color: var(--dourado) !important;
+    background: rgba(255,215,0,0.08);
+    box-shadow: 0 0 20px rgba(255,215,0,0.1);
+}
+
+.copa-card--promo:hover {
+    box-shadow: 0 25px 60px rgba(255,215,0,0.25);
+}
+
+/* Área dos botões */
+.copa__cta-area {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .copa__highlights {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+        /* GALERIA */
+        .gallery__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));grid-auto-flow:dense;gap:1.5rem}
+        .gallery__item{position:relative;border-radius:var(--raio-lg);overflow:hidden;cursor:pointer;box-shadow:var(--sombra-md);transition:all var(--trans)}
+        .gallery__item:hover{transform:translateY(-6px);box-shadow:var(--sombra-xl)}
         .gallery__item img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s}
         .gallery__item:hover img{transform:scale(1.06)}
-        .gallery__item-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%);display:flex;align-items:flex-end;padding:2rem;opacity:0;transition:opacity 0.4s}
+        .gallery__item-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 50%);display:flex;align-items:flex-end;padding:2rem;opacity:0;transition:opacity 0.4s}
         .gallery__item:hover .gallery__item-overlay{opacity:1}
-        .gallery__item-overlay span{color:white;font-weight:700;font-size:1.2rem;letter-spacing:0.5px}
+        .gallery__item-overlay span{color:white;font-weight:700;font-size:1.1rem}
         .gallery__item--tall{grid-row:span 2}
         .gallery__item--wide{grid-column:span 2}
-        @media(max-width:768px){.gallery__grid{grid-template-columns:1fr 1fr}.gallery__item--wide{grid-column:span 2}}
+        @media(max-width:700px){.gallery__grid{grid-template-columns:1fr 1fr}.gallery__item--wide{grid-column:span 2}}
+        @media(max-width:450px){.gallery__grid{grid-template-columns:1fr}.gallery__item--wide{grid-column:span 1}}
 
-        /* ============================================================
-           LIGHTBOX
-           ============================================================ */
+        /* LIGHTBOX */
         .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:99999;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all 0.4s;cursor:zoom-out}
         .lightbox--open{opacity:1;visibility:visible}
-        .lightbox img{max-width:92%;max-height:92%;border-radius:var(--radius-md);box-shadow:0 30px 80px rgba(255,215,0,0.2);animation:lightboxIn 0.4s ease}
+        .lightbox img{max-width:92%;max-height:92%;border-radius:var(--raio-md);box-shadow:0 30px 80px rgba(255,215,0,0.2);animation:lightboxIn 0.4s}
         @keyframes lightboxIn{from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
-        .lightbox__close{position:absolute;top:2rem;right:2rem;font-size:3rem;color:white;z-index:1;transition:transform 0.3s;cursor:pointer}
+        .lightbox__close{position:absolute;top:2rem;right:2rem;font-size:3rem;color:white;cursor:pointer;transition:transform 0.3s}
         .lightbox__close:hover{transform:rotate(90deg)}
 
-        /* ============================================================
-           PRODUTOS
-           ============================================================ */
-        .products{background:var(--bg-primary)}
-        .products__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem}
-        .product-card{background:var(--bg-secondary);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-sm);transition:all var(--transition);border:1.5px solid transparent}
-        .product-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-xl);border-color:var(--amarelo-dourado)}
-        .product-card__img-wrap{height:300px;overflow:hidden}
-        .product-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s}
-        .product-card:hover img{transform:scale(1.08)}
-        .product-card__body{padding:1.8rem;text-align:center}
-        .product-card__body h3{font-family:var(--font-display);font-size:1.4rem;margin-bottom:0.5rem}
+        /* PRODUTOS */
+        .products__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem}
+        .product-card{background:var(--bg-card);border-radius:var(--raio-xl);overflow:hidden;box-shadow:var(--sombra-sm);transition:all var(--trans);border:1.5px solid transparent}
+        .product-card:hover{transform:translateY(-8px);box-shadow:var(--sombra-xl);border-color:var(--dourado)}
+        .product-card__img{height:280px;overflow:hidden}
+        .product-card__img img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s}
+        .product-card:hover .product-card__img img{transform:scale(1.07)}
+        .product-card__body{padding:1.6rem;text-align:center}
+        .product-card__body h3{font-size:1.3rem}
 
-        /* ============================================================
-           FUNDADORES — LAYOUT EDITORIAL
-           ============================================================ */
-        .founders{background:var(--bg-secondary)}
-        .founders__layout{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:6rem}
-        .founders__image-wrap{border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl);position:relative}
-        .founders__image-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s}
-        .founders__image-wrap:hover img{transform:scale(1.03)}
-        .founders__image-frame{position:absolute;inset:0;border:3px solid var(--amarelo-dourado);border-radius:var(--radius-xl);pointer-events:none;opacity:0.3}
-        .founders__info h3{font-family:var(--font-display);font-size:3rem;margin-bottom:1.5rem;line-height:1.2}
-        .founders__info h3 span{color:var(--amarelo-dourado)}
-        .founders__text{color:var(--text-secondary);font-size:1.05rem;line-height:1.85;margin-bottom:1.2rem}
-        .founders__signature{font-family:var(--font-display);font-style:italic;color:var(--amarelo-dourado);font-size:1.4rem;margin-top:2rem}
-        @media(max-width:900px){.founders__layout{grid-template-columns:1fr;gap:3rem;text-align:center}.founders__image-wrap{max-width:450px;margin:0 auto}}
+        /* FUNDADORES */
+        .founders__layout{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:5rem}
+        .founders__img-wrap{border-radius:var(--raio-xl);overflow:hidden;box-shadow:var(--sombra-xl);position:relative}
+        .founders__img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s}
+        .founders__img-wrap:hover img{transform:scale(1.03)}
+        .founders__img-frame{position:absolute;inset:0;border:3px solid var(--dourado);border-radius:var(--raio-xl);pointer-events:none;opacity:0.3}
+        .founders__info h3{font-size:2.6rem;margin-bottom:1.2rem}
+        .founders__info h3 span{color:var(--dourado)}
+        .founders__text{color:var(--texto-sec);font-size:1rem;line-height:1.8;margin-bottom:1rem}
+        .founders__signature{font-family:'Playfair Display',serif;font-style:italic;color:var(--dourado);font-size:1.3rem;margin-top:1.8rem}
+        @media(max-width:900px){.founders__layout{grid-template-columns:1fr;gap:3rem;text-align:center}.founders__img-wrap{max-width:420px;margin:0 auto}}
 
-        /* ============================================================
-           DEPOIMENTOS
-           ============================================================ */
-        .testimonials{background:linear-gradient(180deg, var(--bg-primary) 0%, #FFFDF5 100%)}
-        [data-theme="dark"] .testimonials{background:linear-gradient(180deg, var(--bg-primary) 0%, #1A180F 100%)}
-        .testimonials__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:2.5rem}
-        .testimonial-card{background:var(--bg-secondary);border-radius:var(--radius-xl);padding:3rem 2.5rem;box-shadow:var(--shadow-md);transition:all var(--transition);position:relative;border-left:5px solid var(--amarelo-dourado)}
-        .testimonial-card::before{content:'"';position:absolute;top:1rem;left:1.8rem;font-family:var(--font-display);font-size:7rem;color:var(--amarelo-dourado);opacity:0.12;line-height:1;pointer-events:none}
-        .testimonial-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl)}
-        .testimonial-card p{font-size:1.1rem;line-height:1.8;font-style:italic;color:var(--text-primary);margin-bottom:1.5rem;position:relative;z-index:1}
-        .testimonial-card footer{font-weight:700;color:var(--azul-vibrante);font-size:0.95rem}
+        /* DEPOIMENTOS */
+        .testimonials__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem}
+        .testimonial-card{background:var(--bg-card);border-radius:var(--raio-xl);padding:2.8rem 2.5rem;box-shadow:var(--sombra-md);transition:all var(--trans);border-left:5px solid var(--dourado);position:relative}
+        .testimonial-card::before{content:'"';position:absolute;top:0.8rem;left:1.5rem;font-family:'Playfair Display',serif;font-size:7rem;color:var(--dourado);opacity:0.1;line-height:1;pointer-events:none}
+        .testimonial-card:hover{transform:translateY(-7px);box-shadow:var(--sombra-xl)}
+        .testimonial-card p{font-size:1.05rem;line-height:1.8;font-style:italic;color:var(--texto);margin-bottom:1.2rem;position:relative;z-index:1}
+        .testimonial-card footer{font-weight:700;color:var(--azul);font-size:0.9rem}
+        @media(max-width:500px){.testimonials__grid{grid-template-columns:1fr}}
 
-        /* ============================================================
-           INSTAGRAM
-           ============================================================ */
-        .instagram-section{position:relative;padding:8rem 2.5rem;background:linear-gradient(135deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F77737, #FFDC80)}
-        .instagram-section::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.88)}
+        /* INSTAGRAM */
+        .instagram-section{position:relative;padding:7rem 2rem;background:linear-gradient(135deg,#405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D,#F77737,#FFDC80)}
+        .instagram-section::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.86)}
         [data-theme="dark"] .instagram-section::before{background:rgba(10,10,10,0.9)}
-        .instagram__card{max-width:700px;margin:0 auto;position:relative;z-index:1;text-align:center;padding:4rem 3rem;background:var(--glass-bg);backdrop-filter:blur(24px);border-radius:var(--radius-xl);border:1.5px solid var(--glass-border);box-shadow:var(--shadow-xl)}
-        .instagram__icon-wrap{width:80px;height:80px;background:white;border-radius:50%;display:grid;place-items:center;margin:0 auto 1.8rem;box-shadow:var(--shadow-lg)}
-        .instagram__icon-wrap svg{width:40px;height:40px}
-        .btn--instagram{background:linear-gradient(45deg, #F09433, #E6683C, #DC2743, #CC2366, #BC1888);color:white;padding:1.1rem 3rem;border-radius:var(--radius-full);font-weight:700;font-size:1.1rem;display:inline-flex;align-items:center;gap:0.7rem;box-shadow:0 10px 35px rgba(220,39,67,0.45);transition:all var(--transition)}
-        .btn--instagram:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(220,39,67,0.6)}
+        .instagram__card{max-width:650px;margin:0 auto;position:relative;z-index:1;text-align:center;padding:3.5rem 3rem;
+            background:var(--glass-bg);
+            background:var(--glass-bg-blur);
+            backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+            border-radius:var(--raio-xl);border:1.5px solid var(--glass-border);box-shadow:var(--sombra-xl)}
+        .instagram__icon-wrap{width:75px;height:75px;background:white;border-radius:50%;display:grid;place-items:center;margin:0 auto 1.5rem;box-shadow:var(--sombra-lg)}
+        .instagram__icon-wrap svg{width:38px;height:38px}
+        .btn--instagram{background:linear-gradient(45deg,#F09433,#E6683C,#DC2743,#CC2366,#BC1888);color:white;padding:1rem 2.8rem;border-radius:var(--raio-full);font-weight:700;font-size:1.05rem;display:inline-flex;align-items:center;gap:0.6rem;box-shadow:0 10px 30px rgba(220,39,67,0.4);transition:all var(--trans)}
+        .btn--instagram:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(220,39,67,0.55)}
 
-        /* ============================================================
-           CONTATO & MAPA
-           ============================================================ */
-        .contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
-        .contact__card{background:var(--bg-secondary);border-radius:var(--radius-xl);padding:3.5rem;text-align:center;box-shadow:var(--shadow-md);border:1.5px solid var(--border-medium);transition:all var(--transition)}
-        .contact__card:hover{box-shadow:var(--shadow-xl);border-color:var(--azul-vibrante)}
-        .contact__card h3{font-family:var(--font-display);font-size:2.2rem;margin-bottom:1.5rem}
-        .contact__phone{display:inline-flex;align-items:center;gap:0.8rem;background:#25D366;color:white;padding:1.1rem 2.5rem;border-radius:var(--radius-full);font-weight:700;font-size:1.15rem;box-shadow:0 10px 35px rgba(37,211,102,0.45);transition:all var(--transition)}
-        .contact__phone:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(37,211,102,0.6)}
-        .contact__map-wrap{border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl);height:100%;min-height:380px}
-        .contact__map-wrap iframe{width:100%;height:100%;border:none;min-height:380px}
-        @media(max-width:900px){.contact__grid{grid-template-columns:1fr}.contact__map-wrap{min-height:320px}}
+        /* CONTATO */
+        .contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+        .contact__info-card{background:var(--bg-card);border-radius:var(--raio-xl);padding:3rem;box-shadow:var(--sombra-md);border:1.5px solid var(--borda-media);transition:all var(--trans);display:flex;flex-direction:column;gap:1.5rem}
+        .contact__info-card:hover{box-shadow:var(--sombra-xl);border-color:var(--azul)}
+        .contact__info-card h3{font-size:2rem}
+        .contact__phone-btn{display:inline-flex;align-items:center;gap:0.7rem;background:#25D366;color:white;padding:1rem 2.2rem;border-radius:var(--raio-full);font-weight:700;font-size:1.1rem;box-shadow:0 8px 28px rgba(37,211,102,0.4);transition:all var(--trans);width:fit-content}
+        .contact__phone-btn:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(37,211,102,0.55)}
+        .contact__map-card{background:var(--bg-card);border-radius:var(--raio-xl);overflow:hidden;box-shadow:var(--sombra-xl);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2.5rem;text-align:center;gap:1.2rem;min-height:320px;border:1.5px solid var(--borda-media)}
+        .contact__map-icon{font-size:3.5rem}
+        .contact__map-address{font-weight:600;font-size:1.15rem;color:var(--texto)}
+        .contact__map-btn{display:inline-flex;align-items:center;gap:0.5rem;background:var(--azul);color:white;padding:0.85rem 2rem;border-radius:var(--raio-full);font-weight:600;box-shadow:0 6px 22px rgba(59,130,246,0.35);transition:all var(--trans)}
+        .contact__map-btn:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(59,130,246,0.5)}
+        @media(max-width:900px){.contact__grid{grid-template-columns:1fr}.contact__map-card{min-height:250px}}
 
-        /* ============================================================
-           FOOTER PREMIUM
-           ============================================================ */
-        .footer{background:var(--preto);color:white;padding:6rem 2.5rem 2.5rem;position:relative;overflow:hidden}
-        .footer__bg-glow{position:absolute;width:600px;height:600px;border-radius:50%;filter:blur(180px);opacity:0.06;pointer-events:none}
-        .footer__bg-glow--1{background:var(--azul-vibrante);top:-200px;left:-100px}
-        .footer__bg-glow--2{background:var(--rosa-claro);bottom:-200px;right:-100px}
-        .footer__container{max-width:1400px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:4rem}
-        .footer__brand img{height:55px;margin-bottom:1.2rem}
-        .footer__brand p{color:#A0A0A0;font-size:0.95rem;max-width:280px;line-height:1.7}
-        .footer__col h4{font-family:var(--font-sans);font-weight:700;color:var(--amarelo-dourado);margin-bottom:1.5rem;font-size:1rem;letter-spacing:1.5px;text-transform:uppercase}
-        .footer__col a{display:block;color:#B0B0B0;margin-bottom:0.9rem;font-size:0.95rem;transition:all 0.3s}
-        .footer__col a:hover{color:var(--amarelo-dourado);transform:translateX(6px)}
-        .footer__social-icons{display:flex;gap:1rem;margin-top:1.5rem}
-        .footer__social-icons a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,0.06);transition:all var(--transition);border:1px solid rgba(255,255,255,0.1)}
-        .footer__social-icons a:hover{background:var(--amarelo-dourado);border-color:var(--amarelo-dourado);transform:translateY(-4px);box-shadow:var(--shadow-glow-dourado)}
-        .footer__social-icons svg{width:18px;height:18px;fill:white}
-        .footer__bottom{margin-top:4rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.08);text-align:center;color:#808080;font-size:0.9rem}
-        @media(max-width:900px){.footer__container{grid-template-columns:1fr 1fr;gap:3rem}}
-        @media(max-width:600px){.footer__container{grid-template-columns:1fr}}
+        /* FOOTER */
+        .footer{background:var(--preto);color:white;padding:5rem 2rem 2rem;position:relative;overflow:hidden}
+        .footer__glow{position:absolute;width:550px;height:550px;border-radius:50%;filter:blur(160px);opacity:0.05;pointer-events:none}
+        .footer__glow--1{background:var(--azul);top:-180px;left:-80px}
+        .footer__glow--2{background:var(--rosa);bottom:-180px;right:-80px}
+        .footer__container{max-width:1350px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:3.5rem}
+        .footer__brand img{height:50px;margin-bottom:1rem}
+        .footer__brand p{color:#A0AEC0;font-size:0.9rem;max-width:260px;line-height:1.7}
+        .footer__social{display:flex;gap:0.8rem;margin-top:1.2rem}
+        .footer__social a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);transition:all var(--trans)}
+        .footer__social a:hover{background:var(--dourado);border-color:var(--dourado);transform:translateY(-3px);box-shadow:0 0 22px rgba(255,215,0,0.35)}
+        .footer__social svg{width:17px;height:17px;fill:white}
+        .footer__col h4{font-family:'Outfit',sans-serif;font-weight:700;color:var(--dourado);margin-bottom:1.3rem;font-size:0.9rem;letter-spacing:1.5px;text-transform:uppercase}
+        .footer__col a{display:block;color:#CBD5E1;margin-bottom:0.7rem;font-size:0.9rem;transition:all 0.3s}
+        .footer__col a:hover{color:var(--dourado);transform:translateX(5px)}
+        .footer__bottom{margin-top:4rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.07);text-align:center;color:#64748B;font-size:0.85rem}
+        @media(max-width:900px){.footer__container{grid-template-columns:1fr 1fr;gap:2.5rem}}
+        @media(max-width:550px){.footer__container{grid-template-columns:1fr}}
 
-        /* ============================================================
-           WHATSAPP FLOAT
-           ============================================================ */
-        .whatsapp-float{position:fixed;bottom:2.5rem;right:2.5rem;width:64px;height:64px;background:#25D366;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 35px rgba(37,211,102,0.5);z-index:9000;transition:all var(--transition);animation:whatsappBounce 2.5s infinite}
-        .whatsapp-float:hover{transform:scale(1.12);box-shadow:0 16px 45px rgba(37,211,102,0.65);animation:none}
-        .whatsapp-float svg{width:34px;height:34px;fill:white}
-        @keyframes whatsappBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        /* WHATSAPP FLOAT */
+        .whatsapp-float{position:fixed;bottom:2.2rem;right:2.2rem;width:60px;height:60px;background:#25D366;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 28px rgba(37,211,102,0.45);z-index:9000;transition:all var(--trans);animation:whatsappBounce 2.5s infinite}
+        .whatsapp-float:hover{transform:scale(1.1);animation:none;box-shadow:0 14px 38px rgba(37,211,102,0.6)}
+        .whatsapp-float svg{width:32px;height:32px;fill:white}
+        @keyframes whatsappBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 
-        /* ============================================================
-           BACK TO TOP
-           ============================================================ */
-        .back-to-top{position:fixed;bottom:8rem;right:2.5rem;width:48px;height:48px;background:var(--azul-vibrante);border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 25px rgba(59,130,246,0.5);z-index:9000;opacity:0;visibility:hidden;transition:all 0.4s;cursor:pointer;color:white;font-size:1.4rem;font-weight:700}
+        /* BACK TO TOP */
+        /* ✅ 16. Espaçamento ajustado para não sobrepor WhatsApp em mobile */
+        .back-to-top{position:fixed;bottom:7.5rem;right:2.2rem;width:44px;height:44px;background:var(--azul);border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 20px rgba(59,130,246,0.45);z-index:9000;opacity:0;visibility:hidden;transition:all 0.4s;cursor:pointer;color:white;font-size:1.3rem;font-weight:700}
         .back-to-top--visible{opacity:1;visibility:visible}
-        .back-to-top:hover{transform:translateY(-4px);box-shadow:0 14px 35px rgba(59,130,246,0.65)}
-
-        /* ============================================================
-           RESPONSIVE ADJUSTMENTS
-           ============================================================ */
-        @media(max-width:900px){
-            .section{padding:5rem 1.5rem}
-            .hero{padding:5rem 1.5rem 3rem;min-height:auto}
-            .navbar__container{padding:0 1.5rem}
-            .gallery__grid{grid-template-columns:1fr 1fr}
-        }
+        .back-to-top:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(59,130,246,0.6)}
         @media(max-width:600px){
-            .gallery__grid{grid-template-columns:1fr}
-            .gallery__item--wide{grid-column:span 1}
-            .products__grid{grid-template-columns:1fr}
-            .testimonials__grid{grid-template-columns:1fr}
-            .copa__grid{grid-template-columns:1fr}
-            .section{padding:4rem 1.2rem}
-            .hero__visual-frame{max-width:250px}
+            .back-to-top{bottom:7rem;right:1.5rem;width:40px;height:40px;font-size:1.1rem}
+            .whatsapp-float{bottom:1.8rem;right:1.5rem;width:52px;height:52px}
         }
     </style>
 </head>
 <body>
-
-    <!-- SCROLL PROGRESS -->
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
-    <!-- PRELOADER -->
     <div class="loader" id="loader" aria-hidden="true">
         <div class="loader__inner">
-            <img src="logo.jpg" alt="Fort.Art" class="loader__logo">
-            <div class="loader__rings">
-                <div class="loader__ring"></div>
-                <div class="loader__ring"></div>
-                <div class="loader__ring"></div>
-            </div>
+            <img src="logo.jpg" alt="Fort.Art" class="loader__logo" width="130" height="130">
+            <div class="loader__dots"><div class="loader__dot"></div><div class="loader__dot"></div><div class="loader__dot"></div></div>
         </div>
     </div>
 
-    <!-- NAVBAR -->
     <header class="navbar" id="navbar" role="banner">
         <div class="navbar__container">
-            <a href="#hero" class="navbar__logo" aria-label="Fort.Art — Ir para o topo">
-                <img src="logo.jpg" alt="Fort.Art" class="navbar__logo-img">
-            </a>
-            <nav class="navbar__nav" id="navMenu" role="navigation" aria-label="Navegação principal">
+            <a href="#hero" class="navbar__logo" aria-label="Fort.Art — Ir para o topo"><img src="logo.jpg" alt="Fort.Art" class="navbar__logo-img" width="48" height="48"></a>
+            <nav class="navbar__nav" aria-label="Navegação principal">
                 <a href="#sobre" class="navbar__link" data-section="sobre">Sobre</a>
                 <a href="#copa" class="navbar__link" data-section="copa">Copa 2026</a>
                 <a href="#galeria" class="navbar__link" data-section="galeria">Galeria</a>
@@ -485,27 +617,16 @@
                 <a href="#contato" class="navbar__link" data-section="contato">Contato</a>
             </nav>
             <div class="navbar__actions">
-                <button class="btn-icon theme-toggle" id="themeToggle" aria-label="Alternar tema">
-                    <span class="theme-toggle__icon theme-toggle__icon--sun">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                    </span>
-                    <span class="theme-toggle__icon theme-toggle__icon--moon">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-                    </span>
+                <button class="btn-icon theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+                    <span class="theme-toggle__icon theme-toggle__icon--sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span>
+                    <span class="theme-toggle__icon theme-toggle__icon--moon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
                 </button>
-                <a href="https://www.instagram.com/fort_art_papelaria_e_presentes" target="_blank" rel="noopener noreferrer" class="btn-icon navbar__insta-btn" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                </a>
-                <button class="navbar__hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-                    <span class="navbar__hamburger-line"></span>
-                    <span class="navbar__hamburger-line"></span>
-                    <span class="navbar__hamburger-line"></span>
-                </button>
+                <a href="https://www.instagram.com/fort_art_papelaria_e_presentes" target="_blank" rel="noopener noreferrer" class="btn-icon navbar__insta-btn" aria-label="Instagram Fort.Art"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"><span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span></button>
             </div>
         </div>
     </header>
 
-    <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <div class="mobile-menu__backdrop"></div>
         <div class="mobile-menu__panel">
@@ -527,523 +648,238 @@
     </div>
 
     <main id="main-content">
-        <!-- ============ HERO ============ -->
+        <!-- HERO -->
         <section class="hero" id="hero" aria-labelledby="heroTitle">
-            <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
-            <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
-            <div class="hero__glow hero__glow--3" aria-hidden="true"></div>
+            <div class="hero__glow hero__glow--1" aria-hidden="true"></div><div class="hero__glow hero__glow--2" aria-hidden="true"></div><div class="hero__glow hero__glow--3" aria-hidden="true"></div>
             <div class="hero__container">
                 <div class="hero__content">
-                    <div class="hero__eyebrow">
-                        <span class="hero__eyebrow-dot"></span> NOVIDADE — Álbum Copa 2026
-                    </div>
-                    <h1 class="hero__title" id="heroTitle">
-                        Fort<span class="hero__title-accent">.</span>Art
-                        <span class="hero__title-sub">Papelaria e Presentes</span>
-                    </h1>
-                    <p class="hero__desc">
-                        Mais que uma papelaria — <strong>um espaço criativo</strong> onde cada detalhe inspira. 
-                        Descubra um ambiente acolhedor, produtos selecionados e o 
-                        <strong>ponto oficial de troca do Álbum da Copa 2026</strong>.
-                    </p>
-                    <div class="hero__ctas">
-                        <a href="#sobre" class="btn btn--primary">Conheça nossa loja <span>→</span></a>
-                        <a href="https://wa.me/5517981276335" target="_blank" rel="noopener noreferrer" class="btn btn--glass">Fale conosco</a>
-                    </div>
+                    <!-- ✅ 2. Badge agora usa --texto (funciona nos dois temas) -->
+                    <div class="hero__eyebrow"><span class="hero__eyebrow-dot"></span> NOVIDADE — Álbum Copa 2026</div>
+                    <h1 class="hero__title" id="heroTitle">Fort<span class="hero__title-accent">.</span>Art <span class="hero__title-sub">Papelaria e Presentes</span></h1>
+                    <p class="hero__desc">Mais que uma papelaria — <strong>um espaço criativo</strong> onde cada detalhe inspira. Descubra um ambiente acolhedor, produtos selecionados e o <strong>ponto oficial de troca do Álbum da Copa 2026</strong>.</p>
+                    <div class="hero__ctas"><a href="#sobre" class="btn btn--primary">Conheça nossa loja <span>→</span></a><a href="https://wa.me/5517981276335" target="_blank" rel="noopener noreferrer" class="btn btn--glass">Fale conosco</a></div>
                 </div>
-                <div class="hero__visual">
-                    <div class="hero__visual-frame">
-                        <img src="logo.jpg" alt="Logo Fort.Art" class="hero__visual-img">
-                        <div class="hero__float-badge hero__float-badge--1">🎨 Criatividade</div>
-                        <div class="hero__float-badge hero__float-badge--2">⚽ Copa 2026</div>
-                    </div>
-                </div>
+                <div class="hero__visual"><div class="hero__visual-frame"><img src="logo.jpg" alt="Logo Fort.Art" class="hero__visual-img" width="460" height="460"><div class="hero__float-badge hero__float-badge--1">🎨 Criatividade</div><div class="hero__float-badge hero__float-badge--2">⚽ Copa 2026</div></div></div>
             </div>
         </section>
 
-        <!-- ============ SOBRE ============ -->
-        <section class="section about" id="sobre" aria-labelledby="sobreTitle">
-            <div class="section__container">
-                <div class="about__grid">
-                    <div class="about__image-wrapper">
-                        <img src="loja 1.jpg" alt="Interior da Fort.Art" class="about__image" loading="lazy">
-                        <div class="about__image-accent"></div>
-                    </div>
-                    <div class="about__content">
-                        <span class="section__tag section__tag--blue">Nossa História</span>
-                        <h2 class="section__title" id="sobreTitle" style="margin-bottom:1rem;">Sobre a Fort.Art</h2>
-                        <p style="color:var(--text-secondary);">
-                            A <strong>Fort.Art Papelaria e Presentes</strong> nasceu do sonho de criar um espaço 
-                            onde a criatividade encontra o acolhimento. Somos mais que uma papelaria — somos 
-                            um ponto de encontro para quem ama arte, organização, presentes especiais e a 
-                            magia de colecionar.
-                        </p>
-                        <p style="color:var(--text-secondary);">
-                            Nossa loja foi pensada para oferecer uma <strong>experiência diferenciada</strong>: 
-                            ambiente climatizado, iluminação aconchegante, atendimento personalizado e 
-                            produtos selecionados com carinho.
-                        </p>
-                        <div class="about__pills">
-                            <span class="about__pill">🏠 Ambiente acolhedor</span>
-                            <span class="about__pill">🎁 Presentes criativos</span>
-                            <span class="about__pill">⚽ Ponto Copa 2026</span>
-                            <span class="about__pill">☕ Atendimento especial</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- SOBRE -->
+        <section class="section" id="sobre" aria-labelledby="sobreTitle">
+            <div class="section__container"><div class="about__grid"><div class="about__image-wrap"><img src="loja-1.jpg" alt="Interior aconchegante da Fort.Art Papelaria e Presentes" class="about__image" loading="lazy" width="600" height="520"><div class="about__image-frame"></div></div><div class="about__content"><span class="section__tag section__tag--blue">Nossa História</span><h2 class="section__title" id="sobreTitle" style="margin-bottom:1rem;">Sobre a Fort.Art</h2><p style="color:var(--texto-sec);">A <strong>Fort.Art Papelaria e Presentes</strong> nasceu do sonho de criar um espaço onde a criatividade encontra o acolhimento. Somos mais que uma papelaria — somos um ponto de encontro para quem ama arte, organização, presentes especiais e a magia de colecionar.</p><p style="color:var(--texto-sec);">Nossa loja foi pensada para oferecer uma <strong>experiência diferenciada</strong>: ambiente climatizado, iluminação aconchegante, atendimento personalizado e produtos selecionados com carinho.</p><div class="about__pills"><span class="about__pill">🏠 Ambiente acolhedor</span><span class="about__pill">🎁 Presentes criativos</span><span class="about__pill">⚽ Ponto Copa 2026</span><span class="about__pill">☕ Atendimento especial</span></div></div></div></div>
         </section>
 
-        <!-- ============ COPA 2026 ============ -->
+        <!-- COPA 2026 -->
         <section class="copa" id="copa" aria-labelledby="copaTitle">
-            <div class="copa__bg"><img src="album-copa.jpg" alt="Álbum Copa 2026" class="copa__bg-img" loading="lazy"></div>
+            <img src="album-copa.jpg" alt="Álbum da Copa do Mundo 2026" class="copa__bg-img" loading="lazy" width="1920" height="1080">
             <div class="copa__overlay"></div>
             <div class="copa__container">
-                <span class="section__tag section__tag--gold" style="display:inline-flex;">🔥 NOVIDADE OFICIAL</span>
+                <span class="section__tag section__tag--gold" style="display:inline-flex;background:var(--dourado);color:var(--preto);">🔥 PONTO OFICIAL DE TROCA</span>
                 <h2 class="copa__title" id="copaTitle">Álbum da Copa 2026</h2>
-                <p class="copa__subtitle">Ponto oficial de venda e troca de figurinhas! Garanta já o seu álbum e venha completar a coleção com a gente.</p>
-                <a href="#contato" class="btn btn--gold">⚽ Quero participar</a>
-                <div class="copa__grid">
-                    <div class="copa-card">
-                        <span class="copa-card__icon">📖</span>
-                        <h3>Álbum Oficial</h3>
-                        <p>Adquira aqui o álbum oficial da Copa do Mundo 2026 com capa especial.</p>
-                    </div>
-                    <div class="copa-card" style="position:relative;">
-                        <span class="copa-card__badge">MAIS PROCURADO</span>
-                        <span class="copa-card__icon">⭐</span>
-                        <h3>Figurinhas</h3>
-                        <p>Pacotinhos oficiais Panini e espaço dedicado para troca de repetidas.</p>
-                    </div>
-                    <div class="copa-card">
-                        <span class="copa-card__icon">🤝</span>
-                        <h3>Espaço de Troca</h3>
-                        <p>Encontros aos sábados para trocar figurinhas e completar sua coleção.</p>
-                    </div>
+                <p class="copa__subtitle">O único ponto oficial de venda e troca de figurinhas da região. Garanta já o seu álbum, participe dos nossos eventos de troca e complete sua coleção com a gente!</p>
+                <div class="copa__highlights">
+                    <div class="copa-card"><span class="copa-card__icon">📖</span><h3>Álbum Oficial</h3><p>Adquira o álbum oficial Capa Dura com espaço para todos os times e seleções.</p></div>
+                    <div class="copa-card" style="position:relative;"><span class="copa-card__badge">MAIS PROCURADO</span><span class="copa-card__icon">⭐</span><h3>Figurinhas & Pacotinhos</h3><p>Pacotinhos oficiais Panini disponíveis. Troque suas repetidas em nosso espaço dedicado!</p></div>
+                    <div class="copa-card"><span class="copa-card__icon">🤝</span><h3>Eventos de Troca</h3><p>Encontros todo sábado das 9h às 12h. Traga suas figurinhas e conheça outros colecionadores!</p></div>
                 </div>
+                <div class="copa__cta-area"><a href="#contato" class="btn btn--gold btn--lg">⚽ Quero participar dos eventos</a><a href="https://wa.me/5517981276335" target="_blank" rel="noopener noreferrer" class="btn btn--glass" style="color:white;border-color:rgba(255,255,255,0.4);">💬 Falar no WhatsApp</a></div>
             </div>
         </section>
 
-        <!-- ============ GALERIA ============ -->
-        <section class="section gallery" id="galeria" aria-labelledby="galeriaTitle">
-            <div class="section__container">
-                <div class="section__header">
-                    <span class="section__tag section__tag--rose">Conheça nosso espaço</span>
-                    <h2 class="section__title" id="galeriaTitle">Galeria da Loja</h2>
-                    <p class="section__subtitle">Cada imagem conta um pedaço da nossa história. Passe o mouse para ver a magia.</p>
-                </div>
-                <div class="gallery__grid">
-                    <div class="gallery__item"><img src="loja 1.jpg" alt="Fachada da loja" loading="lazy"><div class="gallery__item-overlay"><span>Fachada</span></div></div>
-                    <div class="gallery__item gallery__item--tall"><img src="loja 2.jpg" alt="Interior" loading="lazy"><div class="gallery__item-overlay"><span>Interior</span></div></div>
-                    <div class="gallery__item"><img src="loja 3.jpg" alt="Produtos" loading="lazy"><div class="gallery__item-overlay"><span>Produtos</span></div></div>
-                    <div class="gallery__item gallery__item--wide"><img src="loja 4.jpg" alt="Presentes" loading="lazy"><div class="gallery__item-overlay"><span>Presentes</span></div></div>
-                    <div class="gallery__item"><img src="loja 5.jpg" alt="Espaço Copa" loading="lazy"><div class="gallery__item-overlay"><span>Espaço Copa</span></div></div>
-                    <div class="gallery__item gallery__item--wide"><img src="loja 6.jpg" alt="Aconchego" loading="lazy"><div class="gallery__item-overlay"><span>Aconchego</span></div></div>
-                    <div class="gallery__item"><img src="loja 7.jpg" alt="Detalhes" loading="lazy"><div class="gallery__item-overlay"><span>Detalhes</span></div></div>
-                </div>
-            </div>
-        </section>
+        <!-- GALERIA -->
+        <section class="section" id="galeria" aria-labelledby="galeriaTitle"><div class="section__container"><div class="section__header"><span class="section__tag section__tag--rose">Conheça nosso espaço</span><h2 class="section__title" id="galeriaTitle">Galeria da Loja</h2><p class="section__subtitle">Cada imagem conta um pedaço da nossa história. Passe o mouse para ver a magia.</p></div><div class="gallery__grid"><div class="gallery__item"><img src="loja-1.jpg" alt="Fachada da Fort.Art" loading="lazy" width="400" height="300"><div class="gallery__item-overlay"><span>Fachada</span></div></div><div class="gallery__item gallery__item--tall"><img src="loja-2.jpg" alt="Interior aconchegante" loading="lazy" width="400" height="600"><div class="gallery__item-overlay"><span>Interior</span></div></div><div class="gallery__item"><img src="loja-3.jpg" alt="Nossos produtos" loading="lazy" width="400" height="300"><div class="gallery__item-overlay"><span>Produtos</span></div></div><div class="gallery__item gallery__item--wide"><img src="loja-4.jpg" alt="Área de presentes" loading="lazy" width="800" height="300"><div class="gallery__item-overlay"><span>Presentes</span></div></div><div class="gallery__item"><img src="loja-5.jpg" alt="Espaço Copa 2026" loading="lazy" width="400" height="300"><div class="gallery__item-overlay"><span>Espaço Copa</span></div></div><div class="gallery__item gallery__item--wide"><img src="loja-6.jpg" alt="Cantinho aconchegante" loading="lazy" width="800" height="300"><div class="gallery__item-overlay"><span>Aconchego</span></div></div><div class="gallery__item"><img src="loja-7.jpg" alt="Detalhes da loja" loading="lazy" width="400" height="300"><div class="gallery__item-overlay"><span>Detalhes</span></div></div></div></div></section>
 
-        <!-- ============ PRODUTOS ============ -->
-        <section class="section products" id="produtos" aria-labelledby="produtosTitle">
-            <div class="section__container">
-                <div class="section__header">
-                    <span class="section__tag section__tag--blue">Variedade & Qualidade</span>
-                    <h2 class="section__title" id="produtosTitle">Nossos Produtos</h2>
-                    <p class="section__subtitle">Cada item selecionado para inspirar sua criatividade e tornar seu dia mais especial.</p>
-                </div>
-                <div class="products__grid">
-                    <div class="product-card">
-                        <div class="product-card__img-wrap"><img src="produto1.jpg" alt="Papelaria Criativa" loading="lazy"></div>
-                        <div class="product-card__body"><h3>✨ Papelaria Criativa</h3></div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card__img-wrap"><img src="produto2.jpg" alt="Presentes Especiais" loading="lazy"></div>
-                        <div class="product-card__body"><h3>🎁 Presentes Especiais</h3></div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card__img-wrap"><img src="produto3.jpg" alt="Linha Copa 2026" loading="lazy"></div>
-                        <div class="product-card__body"><h3>⚽ Linha Copa 2026</h3></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- PRODUTOS -->
+        <section class="section" id="produtos" aria-labelledby="produtosTitle"><div class="section__container"><div class="section__header"><span class="section__tag section__tag--blue">Variedade & Qualidade</span><h2 class="section__title" id="produtosTitle">Nossos Produtos</h2><p class="section__subtitle">Cada item selecionado para inspirar sua criatividade e tornar seu dia mais especial.</p></div><div class="products__grid"><div class="product-card"><div class="product-card__img"><img src="produto-1.jpg" alt="Papelaria criativa" loading="lazy" width="400" height="280"></div><div class="product-card__body"><h3>✨ Papelaria Criativa</h3></div></div><div class="product-card"><div class="product-card__img"><img src="produto-2.jpg" alt="Presentes especiais" loading="lazy" width="400" height="280"></div><div class="product-card__body"><h3>🎁 Presentes Especiais</h3></div></div><div class="product-card"><div class="product-card__img"><img src="album-copa.jpg" alt="Linha Copa 2026" loading="lazy" width="400" height="280"></div><div class="product-card__body"><h3>⚽ Linha Copa 2026</h3></div></div></div></div></section>
 
-        <!-- ============ FUNDADORES ============ -->
-        <section class="section founders" id="fundadores" aria-labelledby="fundadoresTitle">
-            <div class="section__container">
-                <div class="section__header">
-                    <span class="section__tag section__tag--gold">Nossa Alma</span>
-                    <h2 class="section__title" id="fundadoresTitle">Os Fundadores</h2>
-                    <p class="section__subtitle">As pessoas que fazem a Fort.Art ser um lugar verdadeiramente especial.</p>
-                </div>
-                <div class="founders__layout">
-                    <div class="founders__image-wrap">
-                        <img src="fundadores.jpg" alt="Luiz, Fernanda e Eduardo — Fundadores da Fort.Art" loading="lazy">
-                        <div class="founders__image-frame"></div>
-                    </div>
-                    <div class="founders__info">
-                        <h3><span>Luiz, Fernanda</span> e <span>Eduardo</span></h3>
-                        <p class="founders__text">A Fort.Art nasceu do sonho de três pessoas apaixonadas por papelaria e criatividade. Luiz trouxe a visão empreendedora, Fernanda o olhar acolhedor e Eduardo, o criador, a essência artística que faz de cada detalhe da loja uma experiência única.</p>
-                        <p class="founders__text">Juntos, transformaram um pequeno espaço em um ponto de encontro para mentes criativas e colecionadores. Para nós, a Fort.Art é mais que um negócio — é um lugar onde inspiramos, acolhemos e celebramos a beleza das pequenas coisas.</p>
-                        <p class="founders__signature">— Com carinho, Luiz, Fernanda e Eduardo</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- FUNDADORES -->
+        <section class="section" id="fundadores" aria-labelledby="fundadoresTitle"><div class="section__container"><div class="section__header"><span class="section__tag section__tag--gold">Nossa Alma</span><h2 class="section__title" id="fundadoresTitle">Os Fundadores</h2><p class="section__subtitle">As pessoas que fazem a Fort.Art ser um lugar verdadeiramente especial.</p></div><div class="founders__layout"><div class="founders__img-wrap"><img src="fundadores.jpg" alt="Luiz, Fernanda e Eduardo — Fundadores da Fort.Art" loading="lazy" width="600" height="500"><div class="founders__img-frame"></div></div><div class="founders__info"><h3><span>Luiz, Fernanda</span> e <span>Eduardo</span></h3><p class="founders__text">A Fort.Art nasceu do sonho de três pessoas apaixonadas por papelaria e criatividade. Luiz trouxe a visão empreendedora, Fernanda o olhar acolhedor e Eduardo, o criador, a essência artística que faz de cada detalhe da loja uma experiência única.</p><p class="founders__text">Juntos, transformaram um pequeno espaço em um ponto de encontro para mentes criativas e colecionadores. Para nós, a Fort.Art é mais que um negócio — é um lugar onde inspiramos, acolhemos e celebramos a beleza das pequenas coisas.</p><p class="founders__signature">— Com carinho, Luiz, Fernanda e Eduardo</p></div></div></div></section>
 
-        <!-- ============ DEPOIMENTOS ============ -->
-        <section class="section testimonials" id="depoimentos" aria-labelledby="depTitle">
-            <div class="section__container">
-                <div class="section__header">
-                    <span class="section__tag section__tag--rose">Clientes</span>
-                    <h2 class="section__title" id="depTitle">O que dizem sobre nós</h2>
-                </div>
-                <div class="testimonials__grid">
-                    <div class="testimonial-card">
-                        <p>"Melhor papelaria da cidade! Atendimento nota mil e o espaço de troca de figurinhas é sensacional. Minha família adora!"</p>
-                        <footer>— Maria C.</footer>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Ambiente lindo e acolhedor. Sempre encontro presentes criativos e diferentes. Virou meu lugar favorito!"</p>
-                        <footer>— João P.</footer>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"O ponto de troca do álbum da Copa está incrível. Meu filho adorou e já completou metade do álbum!"</p>
-                        <footer>— Ana L.</footer>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- DEPOIMENTOS -->
+        <section class="section" id="depoimentos" aria-labelledby="depTitle"><div class="section__container"><div class="section__header"><span class="section__tag section__tag--rose">Clientes</span><h2 class="section__title" id="depTitle">O que dizem sobre nós</h2></div><div class="testimonials__grid"><div class="testimonial-card"><p>"Melhor papelaria da cidade! Atendimento nota mil e o espaço de troca de figurinhas é sensacional. Minha família adora!"</p><footer>— Maria C.</footer></div><div class="testimonial-card"><p>"Ambiente lindo e acolhedor. Sempre encontro presentes criativos e diferentes. Virou meu lugar favorito!"</p><footer>— João P.</footer></div><div class="testimonial-card"><p>"O ponto de troca do álbum da Copa está incrível. Meu filho adorou e já completou metade do álbum!"</p><footer>— Ana L.</footer></div></div></div></section>
 
-        <!-- ============ INSTAGRAM ============ -->
-        <section class="instagram-section" aria-labelledby="instaTitle">
-            <div class="instagram__card">
-                <div class="instagram__icon-wrap">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                </div>
-                <h2 id="instaTitle" style="font-family:var(--font-display);font-size:2.5rem;margin-bottom:0.8rem;">Siga a Fort.Art</h2>
-                <p style="margin-bottom:2rem;font-size:1.1rem;color:var(--text-secondary);">Acompanhe novidades, bastidores e o dia a dia da nossa papelaria criativa.</p>
-                <a href="https://www.instagram.com/fort_art_papelaria_e_presentes" target="_blank" rel="noopener noreferrer" class="btn--instagram">
-                    @fort_art_papelaria_e_presentes
-                </a>
-            </div>
-        </section>
+        <!-- INSTAGRAM -->
+        <section class="instagram-section" aria-labelledby="instaTitle"><div class="instagram__card"><div class="instagram__icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div><h2 id="instaTitle" style="font-family:'Playfair Display',serif;font-size:2.3rem;margin-bottom:0.8rem;">Siga a Fort.Art</h2><p style="margin-bottom:2rem;font-size:1.05rem;color:var(--texto-sec);">Acompanhe novidades, bastidores e o dia a dia da nossa papelaria criativa.</p><a href="https://www.instagram.com/fort_art_papelaria_e_presentes" target="_blank" rel="noopener noreferrer" class="btn--instagram">@fort_art_papelaria_e_presentes</a></div></section>
 
-<!-- ============ CONTATO (mapa corrigido) ============ -->
-<section class="section" id="contato" aria-labelledby="contatoTitle">
-    <div class="section__container">
-        <div class="section__header">
-            <span class="section__tag section__tag--blue">Visite-nos</span>
-            <h2 class="section__title" id="contatoTitle">Contato & Localização</h2>
-            <p class="section__subtitle">Estamos esperando por você! Venha nos fazer uma visita e viver a experiência Fort.Art.</p>
-        </div>
-        <div class="contact__grid">
-            <div class="contact__card">
-                <h3>📱 Fale com a gente</h3>
-                <p style="margin-bottom:1.5rem;color:var(--text-secondary);">Atendimento rápido e acolhedor pelo WhatsApp.</p>
-                <a href="https://wa.me/5517981276335" target="_blank" rel="noopener noreferrer" class="contact__phone">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-                    +55 17 98127-6335
-                </a>
-            </div>
-            <div class="contact__map-card">
-                <div class="contact__map-visual">
-                    <span class="contact__map-icon">📍</span>
-                    <p class="contact__map-address">Fort.Art Papelaria e Presentes</p>
-                    <a href="https://maps.app.goo.gl/ZvVNdTtzpqMtQMC16" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm magnetic">
-                        Abrir no Google Maps
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <!-- CONTATO -->
+        <section class="section" id="contato" aria-labelledby="contatoTitle"><div class="section__container"><div class="section__header"><span class="section__tag section__tag--blue">Visite-nos</span><h2 class="section__title" id="contatoTitle">Contato & Localização</h2><p class="section__subtitle">Estamos esperando por você! Venha nos fazer uma visita e viver a experiência Fort.Art.</p></div><div class="contact__grid"><div class="contact__info-card"><h3>📱 Fale com a gente</h3><p style="color:var(--texto-sec);">Atendimento rápido e acolhedor pelo WhatsApp. Estamos prontos para te atender!</p><a href="https://wa.me/5517981276335" target="_blank" rel="noopener noreferrer" class="contact__phone-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg> +55 17 98127-6335</a><p style="font-size:0.9rem;color:var(--texto-terc);">Horário: Seg a Sáb, 9h às 18h</p></div><div class="contact__map-card"><span class="contact__map-icon">📍</span><p class="contact__map-address">Fort.Art Papelaria e Presentes</p><p style="color:var(--texto-sec);">Visite nossa loja física — será um prazer receber você!</p><a href="https://maps.app.goo.gl/ZvVNdTtzpqMtQMC16" target="_blank" rel="noopener noreferrer" class="contact__map-btn">Abrir no Google Maps <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div></div></div></section>
     </main>
 
-    <!-- ============ FOOTER PREMIUM ============ -->
-    <footer class="footer" role="contentinfo">
-        <div class="footer__bg-glow footer__bg-glow--1" aria-hidden="true"></div>
-        <div class="footer__bg-glow footer__bg-glow--2" aria-hidden="true"></div>
-        <div class="footer__container">
-            <div class="footer__brand">
-                <img src="logo.jpg" alt="Fort.Art">
-                <p>Papelaria criativa, presentes especiais e o ponto oficial do Álbum da Copa 2026. Um espaço que inspira e acolhe.</p>
-                <div class="footer__social-icons">
-                    <a href="https://www.instagram.com/fort_art_papelaria_e_presentes" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                    </a>
-                    <a href="https://wa.me/5517981276335" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer__col">
-                <h4>Navegação</h4>
-                <a href="#hero">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#copa">Copa 2026</a>
-                <a href="#galeria">Galeria</a>
-            </div>
-            <div class="footer__col">
-                <h4>Mais</h4>
-                <a href="#produtos">Produtos</a>
-                <a href="#fundadores">Fundadores</a>
-                <a href="#depoimentos">Depoimentos</a>
-                <a href="#contato">Contato</a>
-            </div>
-            <div class="footer__col">
-                <h4>Contato</h4>
-                <p style="color:#B0B0B0;margin-bottom:0.6rem;">📱 +55 17 98127-6335</p>
-                <p style="color:#B0B0B0;margin-bottom:0.6rem;">📷 @fort_art_papelaria</p>
-                <p style="color:#B0B0B0;">📍 Venha nos visitar!</p>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <p>&copy; 2026 Fort.Art Papelaria e Presentes. Todos os direitos reservados. | Feito com 💖 para encantar você</p>
-        </div>
-    </footer>
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo"><div class="footer__glow footer__glow--1" aria-hidden="true"></div><div class="footer__glow footer__glow--2" aria-hidden="true"></div><div class="footer__container"><div class="footer__brand"><img src="logo.jpg" alt="Fort.Art" width="50" height="50"><p>Papelaria criativa, presentes especiais e o ponto oficial do Álbum da Copa 2026. Um espaço que inspira e acolhe.</p><div class="footer__social"><a href="https://www.instagram.com/fort_art_papelaria_e_presentes" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://wa.me/5517981276335" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg></a></div></div><div class="footer__col"><h4>Navegação</h4><a href="#hero">Início</a><a href="#sobre">Sobre</a><a href="#copa">Copa 2026</a><a href="#galeria">Galeria</a></div><div class="footer__col"><h4>Mais</h4><a href="#produtos">Produtos</a><a href="#fundadores">Fundadores</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></div><div class="footer__col"><h4>Contato</h4><p style="color:#CBD5E1;font-size:0.9rem;margin-bottom:0.5rem;">📱 +55 17 98127-6335</p><p style="color:#CBD5E1;font-size:0.9rem;margin-bottom:0.5rem;">📷 @fort_art_papelaria</p><p style="color:#CBD5E1;font-size:0.9rem;">📍 Visite nossa loja!</p></div></div><div class="footer__bottom"><p>&copy; 2026 Fort.Art Papelaria e Presentes. Todos os direitos reservados. | Feito por Kaleo Miranda (17)98845-7667, com carinho e dedicção </p></div></footer>
 
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5517981276335" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-    </a>
-
-    <!-- BACK TO TOP -->
+    <a href="https://wa.me/5517981276335" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg></a>
     <div class="back-to-top" id="backToTop" aria-label="Voltar ao topo" role="button" tabindex="0">↑</div>
 
-    <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox" aria-hidden="true">
-        <span class="lightbox__close" id="lightboxClose" aria-label="Fechar">&times;</span>
-        <img src="" alt="" id="lightboxImg">
-    </div>
+    <div class="lightbox" id="lightbox" aria-hidden="true"><span class="lightbox__close" id="lightboxClose" aria-label="Fechar visualização">&times;</span><img src="" alt="" id="lightboxImg"></div>
 
-    <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script>
-        (function() {
-            'use strict';
+        (function(){'use strict';
+            const loader=document.getElementById('loader'),
+                  scrollProgress=document.getElementById('scrollProgress'),
+                  navbar=document.getElementById('navbar'),
+                  hamburger=document.getElementById('hamburger'),
+                  mobileMenu=document.getElementById('mobileMenu'),
+                  mobileClose=document.getElementById('mobileClose'),
+                  backBtn=document.getElementById('backToTop'),
+                  themeToggle=document.getElementById('themeToggle'),
+                  lightbox=document.getElementById('lightbox'),
+                  lightboxImg=document.getElementById('lightboxImg'),
+                  lightboxClose=document.getElementById('lightboxClose'),
+                  html=document.documentElement;
 
-            // ============ DOM ELEMENTS ============
-            const loader = document.getElementById('loader');
-            const scrollProgress = document.getElementById('scrollProgress');
-            const navbar = document.getElementById('navbar');
-            const hamburger = document.getElementById('hamburger');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileClose = document.getElementById('mobileClose');
-            const backBtn = document.getElementById('backToTop');
-            const themeToggle = document.getElementById('themeToggle');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightboxImg');
-            const lightboxClose = document.getElementById('lightboxClose');
-            const html = document.documentElement;
+            const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            // ============ PRELOADER ============
-            window.addEventListener('load', function() {
-                gsap.to(loader, {
-                    opacity: 0,
-                    duration: 0.6,
-                    ease: 'power2.out',
-                    onComplete: function() {
-                        loader.classList.add('loader--hidden');
-                    }
-                });
+            // ✅ 15. Debug condicional (só aparece em desenvolvimento)
+            const DEV = false;
+            if(DEV) console.log('✨ Fort.Art — Site Premium Carregado!');
+
+            // PRELOADER
+            window.addEventListener('load',()=>{
+                gsap.to(loader,{opacity:0,duration:0.5,ease:'power2.out',onComplete:()=>loader.classList.add('loader--hidden')});
             });
 
-            // ============ SCROLL PROGRESS ============
-            function updateScrollProgress() {
-                const scrollTop = window.scrollY;
-                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-                scrollProgress.style.width = progress + '%';
+            // SCROLL PROGRESS
+            function updateProgress(){
+                const s=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;
+                scrollProgress.style.width=h>0?(s/h)*100+'%':'0%';
             }
-            window.addEventListener('scroll', updateScrollProgress, { passive: true });
+            window.addEventListener('scroll',updateProgress,{passive:true});
 
-            // ============ NAVBAR ============
-            function updateNavbar() {
-                navbar.classList.toggle('navbar--scrolled', window.scrollY > 60);
+            // NAVBAR
+            function updateNavbar(){navbar.classList.toggle('navbar--scrolled',window.scrollY>60);}
+            window.addEventListener('scroll',updateNavbar,{passive:true});
+
+            // ACTIVE LINK
+            function updateActiveLink(){
+                const sections=document.querySelectorAll('section[id]'),
+                      links=document.querySelectorAll('.navbar__link');
+                let cur='';
+                sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.getAttribute('id');});
+                links.forEach(l=>{l.classList.toggle('navbar__link--active',l.getAttribute('data-section')===cur);});
             }
-            window.addEventListener('scroll', updateNavbar, { passive: true });
+            window.addEventListener('scroll',updateActiveLink,{passive:true});
 
-            // ============ ACTIVE LINK ============
-            function updateActiveLink() {
-                const sections = document.querySelectorAll('section[id]');
-                const links = document.querySelectorAll('.navbar__link');
-                let currentSection = '';
-                sections.forEach(function(section) {
-                    const sectionTop = section.offsetTop - 120;
-                    if (window.scrollY >= sectionTop) {
-                        currentSection = section.getAttribute('id');
-                    }
-                });
-                links.forEach(function(link) {
-                    link.classList.remove('navbar__link--active');
-                    if (link.getAttribute('data-section') === currentSection) {
-                        link.classList.add('navbar__link--active');
-                    }
-                });
-            }
-            window.addEventListener('scroll', updateActiveLink, { passive: true });
-
-            // ============ MOBILE MENU ============
-            function openMobileMenu() {
+            // ✅ 5. Menu mobile com gerenciamento de foco e tecla Escape
+            const firstMenuLink = mobileMenu.querySelector('.mobile-menu__link');
+            function openMenu(){
                 mobileMenu.classList.add('mobile-menu--open');
-                hamburger.setAttribute('aria-expanded', 'true');
-                mobileMenu.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
+                hamburger.setAttribute('aria-expanded','true');
+                mobileMenu.setAttribute('aria-hidden','false');
+                document.body.style.overflow='hidden';
+                // Move foco para o primeiro link
+                if(firstMenuLink) firstMenuLink.focus();
             }
-            function closeMobileMenu() {
+            function closeMenu(){
                 mobileMenu.classList.remove('mobile-menu--open');
-                hamburger.setAttribute('aria-expanded', 'false');
-                mobileMenu.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
+                hamburger.setAttribute('aria-expanded','false');
+                mobileMenu.setAttribute('aria-hidden','true');
+                document.body.style.overflow='';
+                // Devolve foco ao hambúrguer
+                hamburger.focus();
             }
-            hamburger.addEventListener('click', openMobileMenu);
-            mobileClose.addEventListener('click', closeMobileMenu);
-            document.querySelector('.mobile-menu__backdrop').addEventListener('click', closeMobileMenu);
-            document.querySelectorAll('.mobile-menu__link').forEach(function(link) {
-                link.addEventListener('click', closeMobileMenu);
+            hamburger.addEventListener('click',openMenu);
+            mobileClose.addEventListener('click',closeMenu);
+            document.querySelector('.mobile-menu__backdrop').addEventListener('click',closeMenu);
+            document.querySelectorAll('.mobile-menu__link').forEach(l=>l.addEventListener('click',closeMenu));
+            // Fecha com Escape
+            document.addEventListener('keydown',e=>{
+                if(e.key==='Escape'&&mobileMenu.classList.contains('mobile-menu--open')){
+                    closeMenu();
+                }
             });
 
-            // ============ THEME TOGGLE ============
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            html.setAttribute('data-theme', savedTheme);
-            themeToggle.addEventListener('click', function() {
-                const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-                html.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
+            // THEME
+            const saved=localStorage.getItem('theme')||'light';
+            html.setAttribute('data-theme',saved);
+            themeToggle.addEventListener('click',()=>{
+                const n=html.getAttribute('data-theme')==='light'?'dark':'light';
+                html.setAttribute('data-theme',n);
+                localStorage.setItem('theme',n);
             });
 
-            // ============ BACK TO TOP ============
-            function updateBackToTop() {
-                backBtn.classList.toggle('back-to-top--visible', window.scrollY > 700);
+            // ✅ 7. Botão voltar ao topo responde a Enter e Space
+            function scrollToTop(){
+                window.scrollTo({top:0,behavior:prefersReduced?'auto':'smooth'});
             }
-            window.addEventListener('scroll', updateBackToTop, { passive: true });
-            backBtn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+            function updateBackBtn(){
+                backBtn.classList.toggle('back-to-top--visible',window.scrollY>700);
+            }
+            window.addEventListener('scroll',updateBackBtn,{passive:true});
+            backBtn.addEventListener('click',scrollToTop);
+            backBtn.addEventListener('keydown',e=>{
+                if(e.key==='Enter'||e.key===' '){
+                    e.preventDefault();
+                    scrollToTop();
+                }
             });
 
-            // ============ LIGHTBOX ============
-            document.querySelectorAll('.gallery__item img').forEach(function(img) {
-                img.addEventListener('click', function() {
-                    lightboxImg.src = img.src;
-                    lightboxImg.alt = img.alt;
-                    lightbox.classList.add('lightbox--open');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-            function closeLightbox() {
+            // ✅ 6. Lightbox com gerenciamento de foco (aprisionado)
+            const focusableLightbox = ()=>lightbox.querySelectorAll('img, .lightbox__close');
+            let previousFocus = null;
+            function openLightbox(src,alt){
+                lightboxImg.src=src;
+                lightboxImg.alt=alt;
+                lightbox.classList.add('lightbox--open');
+                document.body.style.overflow='hidden';
+                previousFocus = document.activeElement;
+                // Foco na imagem
+                lightboxImg.focus();
+            }
+            function closeLightbox(){
                 lightbox.classList.remove('lightbox--open');
-                document.body.style.overflow = '';
+                document.body.style.overflow='';
+                if(previousFocus) previousFocus.focus();
             }
-            lightboxClose.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', function(e) {
-                if (e.target === lightbox) closeLightbox();
+            document.querySelectorAll('.gallery__item img').forEach(img=>{
+                img.addEventListener('click',()=>openLightbox(img.src,img.alt));
             });
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && lightbox.classList.contains('lightbox--open')) {
-                    closeLightbox();
+            lightboxClose.addEventListener('click',closeLightbox);
+            lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
+            // Aprisiona foco e fecha com Escape
+            document.addEventListener('keydown',e=>{
+                if(!lightbox.classList.contains('lightbox--open'))return;
+                if(e.key==='Escape'){closeLightbox();return;}
+                if(e.key==='Tab'){
+                    const focusable = focusableLightbox();
+                    if(focusable.length===0)return;
+                    const first=focusable[0],last=focusable[focusable.length-1];
+                    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+                    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
                 }
             });
 
-            // ============ GSAP ANIMAÇÕES ============
+            // GSAP (respeita prefers-reduced-motion)
             gsap.registerPlugin(ScrollTrigger);
+            if(!prefersReduced){
+                const tl=gsap.timeline({defaults:{ease:'power3.out'}});
+                tl.from('.hero__eyebrow',{opacity:0,y:30,duration:0.7},0.3)
+                  .from('.hero__title',{opacity:0,y:50,duration:0.9},0.5)
+                  .from('.hero__desc',{opacity:0,y:30,duration:0.7},0.8)
+                  .from('.hero__ctas',{opacity:0,y:25,duration:0.6},1.0)
+                  .from('.hero__visual-frame',{opacity:0,scale:0.85,duration:1.1},0.4);
 
-            // Hero animation timeline
-            var heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-            heroTl.from('.hero__eyebrow', { opacity: 0, y: 30, duration: 0.7 }, 0.3)
-                .from('.hero__title', { opacity: 0, y: 50, duration: 0.9 }, 0.5)
-                .from('.hero__desc', { opacity: 0, y: 30, duration: 0.7 }, 0.8)
-                .from('.hero__ctas', { opacity: 0, y: 25, duration: 0.6 }, 1.0)
-                .from('.hero__visual-frame', { opacity: 0, scale: 0.85, duration: 1.1 }, 0.4);
+                const anim=(sel,opts)=>{
+                    gsap.utils.toArray(sel).forEach((el,i)=>{
+                        gsap.from(el,Object.assign({
+                            opacity:0,y:50,duration:0.8,ease:'power3.out',
+                            scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none reverse'}
+                        },opts,{delay:(opts.delay||0)+(i*0.08)}));
+                    });
+                };
+                anim('.about__pill',{y:20});
+                anim('.copa-card',{y:60,delay:0.2});
+                anim('.gallery__item',{y:40,scale:0.95,delay:0.1});
+                anim('.product-card',{y:50,delay:0.15});
+                anim('.testimonial-card',{y:40,delay:0.12});
 
-            // Scroll animations
-            function animateOnScroll(selector, options) {
-                gsap.utils.toArray(selector).forEach(function(el, i) {
-                    gsap.from(el, Object.assign({
-                        opacity: 0,
-                        y: 50,
-                        duration: 0.8,
-                        ease: 'power3.out',
-                        scrollTrigger: {
-                            trigger: el,
-                            start: 'top 88%',
-                            toggleActions: 'play none none reverse'
-                        }
-                    }, options, {
-                        delay: options.delay ? options.delay + (i * 0.08) : i * 0.08
-                    }));
-                });
+                gsap.from('.founders__img-wrap',{opacity:0,x:-60,duration:1,scrollTrigger:{trigger:'.founders__layout',start:'top 80%'}});
+                gsap.from('.founders__info',{opacity:0,x:60,duration:1,scrollTrigger:{trigger:'.founders__layout',start:'top 80%'}});
+                gsap.from('.instagram__card',{opacity:0,scale:0.92,y:50,duration:1,scrollTrigger:{trigger:'.instagram__card',start:'top 88%'}});
+                gsap.from('.contact__info-card',{opacity:0,x:-50,duration:0.8,scrollTrigger:{trigger:'.contact__info-card',start:'top 85%'}});
+                gsap.from('.contact__map-card',{opacity:0,x:50,duration:0.8,scrollTrigger:{trigger:'.contact__map-card',start:'top 85%'}});
             }
-
-            animateOnScroll('.about__pill', { y: 20 });
-            animateOnScroll('.copa-card', { y: 60, delay: 0.2 });
-            animateOnScroll('.gallery__item', { y: 40, scale: 0.95, delay: 0.1 });
-            animateOnScroll('.product-card', { y: 50, delay: 0.15 });
-            animateOnScroll('.testimonial-card', { y: 40, delay: 0.12 });
-
-            // Founders section
-            gsap.from('.founders__image-wrap', {
-                opacity: 0,
-                x: -60,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: '.founders__layout',
-                    start: 'top 80%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-            gsap.from('.founders__info', {
-                opacity: 0,
-                x: 60,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: '.founders__layout',
-                    start: 'top 80%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-
-            // Instagram card
-            gsap.from('.instagram__card', {
-                opacity: 0,
-                scale: 0.92,
-                y: 50,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: '.instagram__card',
-                    start: 'top 88%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-
-            // Contact cards
-            gsap.from('.contact__card', {
-                opacity: 0,
-                x: -50,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: '.contact__card',
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-            gsap.from('.contact__map-wrap', {
-                opacity: 0,
-                x: 50,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: '.contact__map-wrap',
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-
-            console.log('✨ Fort.Art — Site Premium Carregado com Sucesso!');
         })();
     </script>
 </body>
